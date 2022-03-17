@@ -10,7 +10,7 @@
     <style>
         label {
             cursor: pointer;
-
+            display: block;
         }
     </style>
 </head>
@@ -21,7 +21,6 @@
         <p>
             <label for="Nome">Nome:</label>
             <input type="text" id="Nome" name="nome" placeholder="Seu nome" required>
-
         </p>
         <p>
             <label for="Dev">Sou um Dev</label>
@@ -30,7 +29,6 @@
             <input type="checkbox" id="Dev1" name="dev1" value="sim"><br>
             <label for="Dev2">Sou um Dev</label>
             <input type="checkbox" id="Dev2" name="dev2" value="sim">
-
         </p>
         <p>
             Gênero:<br>
@@ -40,17 +38,14 @@
             <input type="radio" id="masculino" name="genero" value="masculino"><br>
             <label for="outros">Outros</label>
             <input type="radio" id="outros" name="genero" value="outros">
-
         </p>
         <p>
             <label for="date">Date:</label>
             <input type="date" id="date" name="date" value="2022-03-17">
-
         </p>
         <p>
             <label for="datetime-local">Date:</label>
             <input type="datetime-local" id="datetime-local" name="datetime-local" value="2022-03-17T14:15">
-
         </p>
         <p>
             <label for="time">Hora:</label>
@@ -72,7 +67,56 @@
             <label for="number">Numero:</label>
             <input type="number" id="number" name="number" min="0" max="10" step="2">
         </p>
-
+        <p>
+            <label for="password">Digite sua senha:</label>
+            <input type="password" id="password" name="password" placeholder="Digite a sua senha" min="5" max="8">
+        </p>
+        <p>
+            <label for="range">range:</label>
+            <input type="range" id="range" name="range" list="tickmarks">
+            <datalist id="tickmarks">
+                <option value="0" label="0%">
+                <option value="10">
+                <option value="20">
+                <option value="30">
+                <option value="40">
+                <option value="50" label="50%">
+                <option value="60">
+                <option value="70">
+                <option value="80">
+                <option value="90">
+                <option value="100" label="100%">
+            </datalist>
+        </p>
+        <p>
+            <label for="url">Entre com a URL:</label>
+            <input type="url" id="url" name="url" placeholder="URL">
+        </p>
+        <p>
+            <label for="search">Search:</label>
+            <input type="search" id="search" name="search" placeholder="search">
+        </p>
+        <p>
+            <label for="select">Selecione uma opção:</label>
+            <select id="select" multiple>
+                <optgroup label="Valores de 'A' a 'D'">
+                    <option value="qualquer 1" label="Valor - A" disabled></option>
+                    <option value="qualquer 2" label="Valor - B"></option>
+                    <option value="qualquer 3" label="Valor - C" selected></option>
+                    <option value="qualquer 4" label="Valor - D"></option>
+                </optgroup>
+                <optgroup label="Valores de 'E' a 'H'">
+                    <option value="qualquer 1" label="Valor - E" disabled></option>
+                    <option value="qualquer 2" label="Valor - F"></option>
+                    <option value="qualquer 3" label="Valor - G"></option>
+                    <option value="qualquer 4" label="Valor - H"></option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="textarea">TextArea:</label>
+            <textarea name="textarea" id="textarea"></textarea>
+        </p>
         <p>
             <button type="submit">Enviar</button>
             <button type="reset">Reset</button>
