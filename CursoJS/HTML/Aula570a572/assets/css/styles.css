@@ -1,0 +1,34 @@
+
+*{
+    margin: 0;
+    padding: O;
+}
+
+.pai h1+p {
+color: red;
+}/* adjacent sibling selector - seletores de classes*/
+.pai p+h1 {
+    color: yellow;
+    } /* adjacent sibling selector - seletores de classes*/
+
+    .pai h1~p{
+        color: red;
+    } /*general sibling selector - seletores de classes*/
+
+
+    
+ /* h1, p{
+    color:  red;
+}
+body div section p,
+body div section h1{
+    color: green;
+} primeira explicação - Seleção por tags
+ .color-red{
+    color: red;
+}
+.main-content h3.heading{
+    font-style: italic;
+    color: red;
+}  */
+
