@@ -1,0 +1,19 @@
+/*Ordem da Especificidade:
+       ID  / Classes, atributos, pseudo-classes / Elementos, pseudo-elementos */
+/*      1                     0                                  0         
+        0                     1                                  0  
+        1                     1                                  0
+        1                     1                                  1*/
+
+#p{
+background: red !important;
+}
+.p{
+background: yellow;
+}
+#p.p{
+background:blue ;
+}
+p#p.p{
+background:green ;
+}
