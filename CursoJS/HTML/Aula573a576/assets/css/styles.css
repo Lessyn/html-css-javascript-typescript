@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.heading:hover{
+    background: red;
+}
+.heading{
+    transition: all 600ms ease-in-out;
+}
+a{
+    font-style: italic;
+    color: orange;
+}
+a:link{
+color: blue;
+}
+a:visited{
+    color: red;
+}
+a:hover{
+    background: darkblue;
+    color: white;
+    text-decoration: none;
+}
+a:active{
+    background: darkgreen;
+    color: white;
+    text-decoration: none;
+}
+input:focus{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: 1px solid black;
+}
+input:disabled{
+    background-color: gold;
+    cursor: not-allowed;
+}
+input:checked +p{    
+    background: red;
+    font-style: italic;     
+}
+input:not(:checked) +p{
+    background: yellow;
+}
+.pai .Lista li:last-child{
+background: gray;
+}
+input:required{
+    background: red;
+}
+p:not(.meio){
+    color: blue;
+}
+ul li:nth-child(even){
+    background-color: maroon;
+}
+ul li:nth-child(odd){
+    background-color: green;
+}
+ul li::after{
+    content: ' - ';
+    color: #fff;
+}
+ul li::before{
+    content: ' - ';
+    color: #fff;
+}
+p::first-letter{
+    font-size: 50px;
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+p::selection{
+    background: black;
+    color: white;
+}
