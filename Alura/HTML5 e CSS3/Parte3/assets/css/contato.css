@@ -40,7 +40,7 @@ main{
 form{
     margin: 40px 0;
 }
-form label, p{
+form label, legend{
     display: block;
     font-size: 20px;
     margin: 0 0 10px;
