@@ -40,12 +40,12 @@ main{
 form{
     margin: 40px 0;
 }
-form label{
+form label, p{
     display: block;
     font-size: 20px;
     margin: 0 0 10px;
 }
-form input{
+.input-padrao{
     display: block;
     margin: 0 0 20px;
     padding: 5px 15px;
@@ -61,4 +61,7 @@ footer {
     color: #FFFFFF;
     font-size: 13px;
     margin: 20px 0 0;
+}
+.checkbox, .horario-atendimento{
+    margin: 20px 0;
 }
