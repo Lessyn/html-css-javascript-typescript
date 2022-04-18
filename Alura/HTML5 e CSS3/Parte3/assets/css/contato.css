@@ -92,3 +92,15 @@ footer {
     transform: scale(1.2);
 
 }
+table {
+    margin: 20px 0 40px;
+}
+thead {
+background: #555555;
+color: white;
+font-weight: bold;
+}
+td, th {
+border: 1px #000000 solid;
+padding: 8px 15px;
+}
