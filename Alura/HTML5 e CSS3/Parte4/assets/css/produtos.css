@@ -1,3 +1,7 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 header {
     background: #BBBBBB;
     padding: 20px 0;
@@ -27,7 +31,8 @@ nav a {
     font-size: 22px;
     text-decoration: none;
 }
-nav a:hover{
+
+nav a:hover {
     color: #C78C19;
     text-decoration: underline;
     font-size: 25px;
@@ -44,20 +49,23 @@ nav a:hover{
     display: inline-block;
     vertical-align: top;
     text-align: center;
-    width: 30%;    
+    width: 30%;
     margin: 0 1.5%;
     padding: 30px 20px;
-    box-sizing: border-box;    
+    box-sizing: border-box;
     border: 2px solid #000000;
     border-radius: 10px;
 }
-.produtos li:hover{
-    border-color: #C78C19;    
+
+.produtos li:hover {
+    border-color: #C78C19;
 }
-.produtos li:hover h2{
+
+.produtos li:hover h2 {
     font-size: 35px;
 }
-.produtos li:active{
+
+.produtos li:active {
     border-color: #088C19;
 }
 
@@ -75,13 +83,50 @@ nav a:hover{
     font-weight: bold;
     margin-top: 10%;
 }
+
 footer {
     text-align: center;
     background-image: url("bg.jpg");
     padding: 40px 0;
 }
-.copyright{
+
+.copyright {
     color: #FFFFFF;
     font-size: 13px;
     margin: 20px 0 0;
+}
+
+@media screen and (max-width: 480px) {
+
+    .caixa {
+        width: auto;
+    }
+
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .produtos,
+    .produtos li,
+    .produtos h2,
+    .produto-descricao,
+    .produto-preco
+     {
+        width: auto;
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+    }
+    .produtos li:hover {
+        border-color: #C78C19;
+    }
+    
+    .produtos li:hover h2 {
+        font-size: 35px;
+    }
 }

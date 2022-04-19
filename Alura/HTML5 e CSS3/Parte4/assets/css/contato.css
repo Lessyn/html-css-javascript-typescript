@@ -1,3 +1,7 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 header {
     background: #BBBBBB;
     padding: 20px 0;
@@ -87,20 +91,44 @@ footer {
     transition: 1s all;
     cursor: pointer;
 }
+
 .enviar:hover {
     background: darkorange;
     transform: scale(1.2);
 
 }
+
 table {
     margin: 20px 0 40px;
 }
+
 thead {
-background: #555555;
-color: white;
-font-weight: bold;
+    background: #555555;
+    color: white;
+    font-weight: bold;
 }
-td, th {
-border: 1px #000000 solid;
-padding: 8px 15px;
+
+td,
+th {
+    border: 1px #000000 solid;
+    padding: 8px 15px;
+}
+
+@media screen and (max-width: 480px) {
+
+    .caixa {
+        width: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    } 
+    form{
+        position: static;
+    }   
+    
 }

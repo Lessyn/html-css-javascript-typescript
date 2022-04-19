@@ -198,7 +198,8 @@ th {
 	transition: 400ms;
 	box-shadow: 10px 10px 5px 0px #000000;
 }
-.img-beneficios:hover{
+
+.img-beneficios:hover {
 	opacity: 1;
 }
 
@@ -223,3 +224,22 @@ img ~ p{
 	background-color: orange;
 }
 */
+@media screen and (max-width: 480px) {
+
+	.caixa,
+	.principal,
+	.conteudo-beneficios,
+	.mapa-conteudo,
+	.video {
+		width: auto;
+	}
+	h1{
+		text-align: center;
+	}
+	nav {
+		position: static;
+	}
+	.lista-beneficios, .img-beneficios{
+		width: 100%;
+	}
+}
