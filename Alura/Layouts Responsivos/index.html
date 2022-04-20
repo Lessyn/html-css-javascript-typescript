@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/cabecalho.css">
@@ -149,18 +150,24 @@
         </section>
         <section class="institucional container">
             <h2 class="institucional__titulo">Institucional</h2>
-            <p class="institucional__descricao">Um pouco mais sobre a Apeperia</p>
-            <address class="institucional__endereco">Rua Vergueiro, 3185 </br>
-                Vila Mariana, São Paulo
-                <article class="institucional__contato">
-                    <p><a type="tel" href="tel:+551155712751" class="institucional__contato--telefone">(11)
-                            5571-2751</a> ou
-                        <a type="email" href="mailto:contato@apeperia.com"
-                            class="institucional__contato--email">contato@apeperia.com</a>
-                    </p>
-                </article>
-            </address>
-            <video src="img/formacao-java.mp4" class="institucional__video" controls></video>
+            <div class="institucional__conteudo">
+                <div class="institucional__informacoes">
+                    <p class="institucional__descricao">Um pouco mais sobre a Apeperia</p>
+                    <address class="institucional__endereco">Rua Vergueiro, 3185 </br>
+                        Vila Mariana, São Paulo
+                        <article class="institucional__contato">
+                            <p>
+                                <a href="tel:+551155712751" class="institucional__contato--telefone">(11)
+                                    5571-2751</a> ou
+                                <a href="mailto:contato@apeperia.com"
+                                    class="institucional__contato--email">contato@apeperia.com</a>
+                            </p>
+                        </article>
+                    </address>
+                </div>
+                <video src="img/formacao-java.mp4" class="institucional__video" controls></video>
+            </div>
+
         </section>
     </main>
     <!-- footer.rodape.container>img.rodape__logo(ul.rodape__social>li*3>a.rodape__midia)+nav>ul.rodape__navegacao>li*6.rodape__link>a Criacão emmet abaixo-->
