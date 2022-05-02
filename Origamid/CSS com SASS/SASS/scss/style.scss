@@ -2,31 +2,61 @@ $cor_primaria: blue;
 $font_primaria: monospace;
 
 section {
-max-width: 600px;
-margin: 0 auto;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-h1 {
-    color: $cor_primaria;
-    font-family: $font_primaria;
+.modal {
+
+    h1 {
+        color: $cor_primaria;
+        font-family: $font_primaria;
+    }
+
+    //Estilo Nesting de propriedade: Aqui pode colocar somente as atribnuições com relação as configurações.
+    p {
+        font: {
+            size: 1.2em;
+            family: $font_primaria;
+            style: italic;
+        }
+
+        line-height: 1.4;
+        max-width: 400px;
+
+    }
+
+    a {
+        display: block;
+        max-width: 120px;
+        padding: 10px;
+        border-radius: 4px;
+        text-align: center;
+        background: $cor_primaria;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: $font_primaria;
+    }
 }
 
-p {
-font-size: 1.2em;
-line-height: 1.4;
-max-width: 400px;
-font-family: $font_primaria;
-}
-
-a {
-    display: block;
-    max-width: 120px;
-    padding: 10px;
-    border-radius: 4px;
+ul {
     text-align: center;
-    background: $cor_primaria;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: $font_primaria;
+
+    li {
+        display: inline-block;
+        list-style: none;
+
+        a {
+            display: block;
+            padding: 20px;
+            text-decoration: none;
+            background: blue;
+            color: white;
+
+            &:hover {
+                background: pink;
+            }
+        }
+    }
 }
