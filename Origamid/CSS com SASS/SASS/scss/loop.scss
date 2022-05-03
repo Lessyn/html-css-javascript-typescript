@@ -1,0 +1,44 @@
+//tipos de for
+
+@for $i from 1 through 6 {
+    .item-#{$i} {
+        width: 200px * $i;
+    }
+}
+
+$container: 960;
+$gutter: 20;
+$colunas: 12;
+
+@for $i from 1 through $colunas {
+    $width: $container / $colunas * $i - $gutter;
+
+    .grid-#{$i} {
+        width: $width + px;
+    }
+
+}
+
+@for $i from 1 through 16 {
+    $width: $i / 16 * 100 + '%';
+    .porcento-#{$i}{
+        width: $width;
+    }
+
+} 
+
+$numero: 1;
+@while $numero <= 6 {
+    .type-#{$numero}{
+        font-size: 16 * $numero + px;
+    }
+    $numero: $numero + 1;
+}
+
+$lista: facebook twitter instagram snapchat;
+
+@each $item in $lista{
+    .rede-#{$item}{
+        background: url('img/#{$item}.png');
+    }
+}
