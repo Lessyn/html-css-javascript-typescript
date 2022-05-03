@@ -1,3 +1,65 @@
+//Uso de condicionais.
+
+$tema: oceano;
+$primary-color: black;
+$secondary-color: gray;
+
+@if $tema==oceano {
+    $primary-color: blue;
+    $secondary-color: orange;
+}
+
+@else if $tema==deserto {
+    $primary-color: yellow;
+    $secondary-color: purple;
+}
+
+@mixin type-1($size) {
+    font-family: monospace;
+    font-weight: normal;
+
+    @if $size==16 {
+        font-size: 1em;
+        font-weight: normal;
+    }
+    @else if $size == 18 {
+        font-size: 1.25em;
+        font-weight: normal;
+    }
+    @else if $size == 24 {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+}
+//Uso de condicionais para responsividade
+
+@mixin d($device) {
+    @if $device == m {
+        @media(max-width: 300px){
+            @content
+        }
+    }
+    @else if $device == t {
+        @media(max-width: 600px){
+            @content
+        }
+    }
+    @else if $device == s {
+        @media(max-width: 900px){
+            @content
+        }
+    }    
+}
+div{
+    width: 100%;
+    @include d(t){
+        width: 80%;
+    }
+    @include d(m){
+        width: 60%;
+    }
+}
+
 @mixin title-large {
     font-size: 4em;
     font-weight: bold;
@@ -12,9 +74,10 @@
     -webkit-box-sizing: border-box;
 
 }
+
 //Utilizando mixin como separador
 @mixin separador($color: yellow, $largura: 400px) {
-    &::after{
+    &::after {
         content: '';
         display: block;
         width: $largura;
@@ -22,14 +85,15 @@
         background: $color;
     }
 }
+
 @mixin box-shadow($shadow...) {
     box-shadow: $shadow;
     -moz-box-shadow: $shadow;
-    webkit-box-shadow: $shadow;    
+    webkit-box-shadow: $shadow;
 }
 
 @mixin mobile {
-    @media (max-width: 600px){
+    @media (max-width: 600px) {
         @content;
     }
 }
@@ -45,15 +109,17 @@ section {
 
 .modal {
 
-    @include box-shadow(10px 10px 0 0 rgba(0,0,0,.5),
-                        15px 15px 0 0 rgba(0,0,0,.5),
-                        20px 20px 0 0 rgba(0,0,0,.5));
+    @include box-shadow(10px 10px 0 0 rgba(0, 0, 0, .5),
+        15px 15px 0 0 rgba(0, 0, 0, .5),
+        20px 20px 0 0 rgba(0, 0, 0, .5));
+
     h1 {
         color: $cor_primaria;
         font-family: $font_primaria;
         @include title-large();
         @include separador();
-        @include mobile(){
+
+        @include mobile() {
             color: #84E;
             font-size: 2em;
         }
