@@ -1,25 +1,19 @@
-body {
-  padding: 0px;
-  margin: 0px;
+*, *::after, *::before {
+  box-sizing: border-box;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  background: blue;
+p {
+  color: blue;
 }
 
-.container::after, .container::before {
-  content: '';
-  display: table;
-  clear: both;
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  p {
+    color: pink;
+  }
 }
 
-.grid-3 {
-  width: calc(25% - 20px);
-  margin-left: 10px;
-  margin-right: 10px;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  float: left;
+@media screen and (max-width: 759px) {
+  p {
+    color: aqua;
+  }
 }

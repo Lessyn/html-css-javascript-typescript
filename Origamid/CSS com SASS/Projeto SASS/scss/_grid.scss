@@ -1,23 +1,40 @@
-body {
-    padding: 0px;
-    margin: 0px;
+//Variáveis do grid
+$cols: 12;
+$gutter: 20px; //Margens
+$l-device: 1200px; //large-device: Dispositivos largo
+$m-device:  760px; //medium-device: Dispositivos médio
+$s-device:  480px; //Small-device: Dispositivos pequenos
+
+//Box sizing
+*, *::after, *::before{
+box-sizing: border-box;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    background: blue;
-    &::after, &::before{
-        content: '';
-        display: table;
-        clear: both;
+//Mixin de media=query
+@mixin d($size) {
+    @if $size == l {
+        @media screen and (min-width: $l-device){
+            @content;
+        }        
+    }
+     @else if $size == m {
+        @media screen and (min-width: $m-device) and (max-width: $l-device - 1){
+            @content;
+        }        
+    }
+    @else if $size == s {
+        @media screen and (max-width: $m-device - 1){
+            @content;
+        }        
     }
 }
-.grid-3 {
-    width: calc(25% - 20px);
-    margin-left: 10px;
-    margin-right: 10px;
-    background: rgba(0,0,0,.5);
-    color: white;
-    float: left;    
+
+p {
+    color: blue;
+    @include d(m) {
+    color: pink;
+    }
+    @include d(s) {
+        color: aqua;
+    }
 }
