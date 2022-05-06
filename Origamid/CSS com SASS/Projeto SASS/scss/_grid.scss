@@ -41,7 +41,7 @@ $s-device: 480px; //Small-device: Dispositivos pequenos
 
     @if $offset==offset {
         $gutter: $gutter / 2;
-        $result: calc (#{$width} + #{$gutter});
+        $result: calc(#{$width} + #{$gutter});
     }
 
     @return $result;
@@ -50,13 +50,13 @@ $s-device: 480px; //Small-device: Dispositivos pequenos
 //Gera as classes de grid
 
 @for $i from 1 through $cols {
-    .grid#{$i} {
+    .grid-#{$i} {
         width: grid($i);
     }
 }
 
 //Mixin estrutura do grid
-@mixin grid-struture {
+@mixin grid-structure {
     float: left;
     min-height: 1px;
     margin-left: $gutter / 2;
@@ -71,13 +71,13 @@ $s-device: 480px; //Small-device: Dispositivos pequenos
 }
 
 [class^="grid-"] {
-    @include grid-struture;
+    @include grid-structure;
 }
 
 //Gera as classes de offset
 @for $i from 1 through $cols {
     .offset-#{$i} {
-        margin-left: grid ($i, offset);
+        margin-left: grid($i, offset);
         @extend %offset;
     }
 }
@@ -111,8 +111,8 @@ $s-device: 480px; //Small-device: Dispositivos pequenos
 
     @include d(s) {
         max-width: $s-device;
-        margin-left: 10px;
-        margin-right: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     @include clearfix;
@@ -120,4 +120,26 @@ $s-device: 480px; //Small-device: Dispositivos pequenos
 
 .container {
     @include container;
+}
+
+@mixin row {
+    position: relative;
+    margin-left: -$gutter / 2;
+    margin-right: -$gutter / 2;
+
+    @include d(s) {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    @include clearfix;}
+
+.row {
+    @include row;
+}
+
+div {
+    background: rgba(0, 0, 0, .4);
+    min-height: 50px !important;
+    margin-bottom: 20px;
 }
