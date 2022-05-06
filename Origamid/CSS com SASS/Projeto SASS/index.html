@@ -5,11 +5,95 @@
 	<title>Le Scone</title>
 	<meta name="description" content="Le Scone - Restaurante">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=PT+Mono&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	
+
+	<main class="container introducao">
+		<div class="grid-5">
+			<img class="logo" src="img/lescone.png" alt="Le Scone" />
+			<div class="info-introducao">
+				<p>De Seg. à Sáb.<span class="Aberto"></span><br>das 07:00h às 18:00h</p>
+				<p>Praia de Botafogo, 300 <br>Rio de Janeiro - RJ</p>
+			</div>
+			<P class="telefone-introducao">+55 021 2412-3333</P>
+		</div>
+		<div class="grid-7">
+			<img src="img/foto.png" alt="Foto  de Le Scone">
+		</div>
+	</main>
+
+	<section class="container menu">
+		<h1 class="grid-4 titulo">Menu</h1>
+		<div class="grid-7 offset-1">
+			<div class="menu-item">
+				<img src="img/prato-1.png" alt="Foto prato 1">
+				<h2>Entradas</h2>
+				<ul>
+					<li><span>R$1,70</span>Ovos mexidos</li>
+					<li><span>R$2,70</span>Scones de Frutas</li>
+					<li><span>R$3,70</span>Joelho de Queijo</li>
+					<li><span>R$4,70</span>Presunto cozido</li>
+					<li><span>R$3,70</span>Coxinha de Frango</li>
+				</ul>
+			</div>
+			<div class="menu-item">
+				<img src="img/prato-2.png" alt="Foto prato 2">
+				<h2>Pratos Principais</h2>
+				<ul>
+					<li><span>R$10,70</span>Penne com Queijo</li>
+					<li><span>R$22,70</span>Feijoada</li>
+					<li><span>R$33,70</span>Costela ao Molho</li>
+					<li><span>R$14,70</span>Medalhão de Frango</li>
+					<li><span>R$13,70</span>Coxinha de Frango</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="container contato">
+		<h1 class="grid-4 titulo">Contato</h1>
+		<div class="grid-7 offset-1">
+			<form>
+				<label for="name">Nome</label>
+				<input type="text">
+				<div class="row">
+					<div class="grid-7">
+						<label for="email">E-mail</label>
+						<input type="text">
+					</div>
+					<div class="grid-5">
+						<label for="Telefone">Telefone</label>
+						<input type="text">
+					</div>
+				</div>
+				<label for="mensagem">Mensagem</label>
+				<textarea></textarea>
+				<input class="button" type="button" value="Enviar">
+			</form>
+			<div class="info-contato">
+				<p>contato@lescone.com ////</p>
+				<p>+55 021 2412-3333 ////</p>
+			</div>
+			<a href="#" class="contato-mapa" alt="como chegar no Le Scone">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3745.9629467305276!2d-44.898408885160734!3d-20.135593386488868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa0a59bf5ea1e21%3A0x88ecbcc7a19e9d83!2zSW5vdmHDp8OjbyBDb21wdXRhw6fDo28gTcOzdmVs!5e0!3m2!1spt-BR!2sbr!4v1651862073837!5m2!1spt-BR!2sbr"
+					width="600" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</a>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<p>Le Scone &copy; 1989 - 2016. Alguns direitos reservados.</p>
+			<a href="https://www.origamid.com" target="_blank">
+				<img src="img/lescone-icone.png" alt="Icone da Le Scone">
+			</a>
+		</div>
+	</footer>
 </body>
 
 </html>

@@ -148,24 +148,26 @@
   clear: both;
 }
 
-div {
-  background: rgba(0, 0, 0, 0.4);
-  min-height: 50px !important;
-  margin-bottom: 20px;
+.row {
+  position: relative;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
-/*@mixin row {
-    position: relative;
-    margin-left: -$gutter / 2;
-    margin-right: -$gutter / 2;
+@media screen and (max-width: 759px) {
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
 
-    @include d(s) {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
+.row::after, .row::before {
+  content: '';
+  display: table;
+  clear: both;
+}
 
-    @include clearfix;}
-
-.row {
-    @include row;
-}*/
+div {
+  font-family: 'Aref Ruqaa', serif;
+  font-family: 'PT Mono', monospace;
+}

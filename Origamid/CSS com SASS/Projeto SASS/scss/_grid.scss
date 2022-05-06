@@ -137,9 +137,3 @@ $s-device: 480px; //Small-device: Dispositivos pequenos
 .row {
     @include row;
 }
-
-div {
-    background: rgba(0, 0, 0, .4);
-    min-height: 50px !important;
-    margin-bottom: 20px;
-}
