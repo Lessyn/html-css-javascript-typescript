@@ -36,7 +36,7 @@ $s-device: 480px; //Small-device: Dispositivos pequenos
 //Função do grid
 @function grid($col, $offset: false) {
 
-    $width: $col / $cols * 100 + "%";
+    $width: $col / $cols * 100+"%";
     $result: calc(#{$width} - #{$gutter});
 
     @if $offset==offset {
@@ -132,7 +132,8 @@ $s-device: 480px; //Small-device: Dispositivos pequenos
         margin-right: 0px;
     }
 
-    @include clearfix;}
+    @include clearfix;
+}
 
 .row {
     @include row;
