@@ -500,3 +500,30 @@ input.button:hover {
   box-shadow: 0 0 0 10px #CBC6B9;
   clear: both;
 }
+
+footer {
+  padding: 20px 0;
+  background: #2A2426;
+  box-shadow: 0 0 0 10px #2A2426;
+}
+
+footer p {
+  color: #EDECE4;
+}
+
+@media screen and (max-width: 759px) {
+  footer p {
+    text-align: center;
+  }
+}
+
+footer a img {
+  float: right;
+}
+
+@media screen and (max-width: 759px) {
+  footer a img {
+    float: none;
+    margin: 20px auto;
+  }
+}
