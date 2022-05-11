@@ -1,0 +1,119 @@
+
+
+//# Front-end Style Guide
+
+//## Layout
+
+//The designs were created to the following widths:
+
+//- Mobile: 375px
+//- Desktop: 1440px*/
+
+$cols: 12;
+$gutter: 20px; //Margens
+$d-device: 1440px; //Desktop-device: Dispositivos largo
+$m-device: 375px; //Mobile-device: Dispositivos pequenos
+
+
+
+//Mixin de media=query
+@mixin s($size) {
+    @if $size==d {
+        @media screen and (min-width: $d-device) {
+            @content;
+        }
+    }
+
+   /* @else if $size==m {
+        @media screen and (min-width: $m-device) and (max-width: $d-device - 1) {
+            @content;
+        }
+    }*/
+
+    @else if $size==m {
+        @media screen and (max-width: $d-device - 1) {
+            @content;
+        }
+    }
+}
+@function grid($col) {
+
+    $width: $col / $cols * 100+"%";
+    $result: calc(#{$width} - #{$gutter});   
+
+    @return $result;
+}
+
+//Gera as classes de grid
+
+@for $i from 1 through $cols {
+    .grid-#{$i} {
+        width: grid($i);
+    }
+}
+
+//Mixin estrutura do grid
+@mixin grid-structure {
+    float: left;
+    min-height: 1px;
+    margin-left: $gutter / 2;
+    margin-right: $gutter / 2;
+
+    @include s(m) {
+        width: 100%;
+        float: none;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+[class^="grid-"] {
+    @include grid-structure;
+}
+//mixin do clearfix
+@mixin clearfix {
+    &::after, &::before{
+        content:'';
+        display: table;
+        clear: both;
+    }
+}
+
+//Mixin do container
+@mixin container {
+    max-width: $d-device;
+    margin: 0px auto;
+    position: relative;   
+
+    @include s(m) {
+        max-width: $m-device;
+        padding-left: 10px;
+        padding-right: 10px;
+    }  
+    
+    @include clearfix;
+}
+
+.container {
+    @include container;
+}
+
+@mixin row {
+    position: relative;
+    margin-left: -$gutter / 2;
+    margin-right: -$gutter / 2;
+
+    @include s(m) {
+        margin-left: 0px;
+        margin-right: 0px;
+    }    
+}
+
+.row {
+    @include row;
+}
+
+/*div {
+    background: gray;
+    
+}*/

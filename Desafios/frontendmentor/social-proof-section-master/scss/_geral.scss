@@ -1,0 +1,61 @@
+//## Colors
+
+//### Primary
+
+$colorprimaryA: hsl(300, 43%, 22%);
+$colorprimaryB: hsl(333, 80%, 67%);
+
+//### Neutral
+
+$colorneutralA: hsl(303, 10%, 53%);
+$colorneutralB: hsl(300, 24%, 96%);
+$colorneutralC: hsl(0, 0%, 100%);
+
+//## Typography
+
+//### Body Copy
+ body{
+Font-size: 15px;
+
+ }
+
+//### Font
+body{
+    font-family: 'League Spartan', sans-serif;
+}
+
+
+.maintext {
+    margin: 40px 0;
+    color: $colorprimaryA;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.text{
+    margin-bottom: 40px;
+    color: $colorneutralA;
+}
+
+.attribution {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.starimage1{
+    margin-top: 40px;
+}
+
+.grid-6{
+    text-align: center;
+}
+
+
+.imagem {
+    display: flex;
+    align-items: flex-start;
+}
+
+.blockquote {
+    max-width: 10px;
+}
