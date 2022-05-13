@@ -14,6 +14,13 @@ $gutter: 20px; //Margens
 $d-device: 1440px; //Desktop-device: Dispositivos largo
 $m-device: 375px; //Mobile-device: Dispositivos pequenos
 
+//Box sizing
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
 
 
 //Mixin de media=query
@@ -22,13 +29,7 @@ $m-device: 375px; //Mobile-device: Dispositivos pequenos
         @media screen and (min-width: $d-device) {
             @content;
         }
-    }
-
-   /* @else if $size==m {
-        @media screen and (min-width: $m-device) and (max-width: $d-device - 1) {
-            @content;
-        }
-    }*/
+    }  
 
     @else if $size==m {
         @media screen and (max-width: $d-device - 1) {
@@ -112,8 +113,3 @@ $m-device: 375px; //Mobile-device: Dispositivos pequenos
 .row {
     @include row;
 }
-
-/*div {
-    background: gray;
-    
-}*/
