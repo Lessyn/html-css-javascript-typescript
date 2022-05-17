@@ -21,9 +21,7 @@ $m-device: 375px; //Mobile-device: Dispositivos pequenos
     box-sizing: border-box;
 }
 
-
-
-//Mixin de media=query
+//Mixin de media query
 @mixin s($size) {
     @if $size==d {
         @media screen and (min-width: $d-device) {
