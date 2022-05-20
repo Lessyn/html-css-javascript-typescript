@@ -1,6 +1,5 @@
 console.log(`Trabalhando com condicionais`);
 
-
 const listasDeDestino = new Array(`Salvador`, ` São Paulo`, ` Rio de Janeiro`, ` Curitiba.`);
 const idadeIdeal = 18;
 const acompanhada = 17;
@@ -12,7 +11,7 @@ if (idadeComprador < idadeIdeal && acompanhada < idadeIdeal) {
 }
 else {
     if
-        (acompanhada == idadeIdeal && idadeComprador < idadeIdeal) {
+        (acompanhada >= idadeIdeal && idadeComprador < idadeIdeal) {
         console.log("Acompanhada por uma pessoa maior de idade e destinos possíveis são: " + listasDeDestino);
     }
 
