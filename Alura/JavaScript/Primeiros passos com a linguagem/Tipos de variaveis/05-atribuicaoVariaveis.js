@@ -7,6 +7,3 @@ const sobrenome = "Lessyn";
 console.log(primeiroNome + " " + sobrenome);
 console.log(primeiroNome, sobrenome);
 console.log(`Meu nome é ${primeiroNome} ${sobrenome}`);
-
-
-

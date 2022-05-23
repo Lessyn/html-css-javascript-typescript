@@ -10,6 +10,3 @@ console.log("Rodrigo" / 2); // Not a number
 
 console.log(6.5);
 console.log(6,5);
-
-
-
