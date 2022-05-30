@@ -22,7 +22,6 @@ for (var i = 0; i < pacientes.length; i++) {
         pesoEhValido = false;
         tdImc.textContent = "Peso inválido";
         paciente.classList.add("paciente-invalido");
-
     }
 
     if (!alturaEhValida) {

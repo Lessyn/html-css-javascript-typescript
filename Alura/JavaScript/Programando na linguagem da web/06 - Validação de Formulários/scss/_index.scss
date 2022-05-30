@@ -1,4 +1,3 @@
-
 $colorBackgroundDadosInvalidos : red; // Cor do background inserida quando paciente estiver com peso e ou altura inválidas.
 $colorTextDadosInvalidos : white; // Cor do texto inserida quando o paciente estiver com o peso e ou a altura inválidas.
 
@@ -139,4 +138,7 @@ button[disabled=disabled], button:disabled {
 .paciente-invalido{
 	background-color: $colorBackgroundDadosInvalidos;
 	color: $colorTextDadosInvalidos;
+}
+.mensagens-erro{
+	color: red;
 }
