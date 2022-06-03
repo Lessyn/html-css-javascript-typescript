@@ -1,0 +1,13 @@
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\OOP\bin\Debug\netcoreapp2.2\OOP.deps.json
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\OOP\bin\Debug\netcoreapp2.2\OOP.runtimeconfig.json
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\OOP\bin\Debug\netcoreapp2.2\OOP.runtimeconfig.dev.json
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\OOP\bin\Debug\netcoreapp2.2\OOP.dll
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\OOP\bin\Debug\netcoreapp2.2\OOP.pdb
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\OOP\obj\Debug\netcoreapp2.2\OOP.csproj.AssemblyReference.cache
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\OOP\obj\Debug\netcoreapp2.2\OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\OOP\obj\Debug\netcoreapp2.2\OOP.AssemblyInfoInputs.cache
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\OOP\obj\Debug\netcoreapp2.2\OOP.AssemblyInfo.cs
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\OOP\obj\Debug\netcoreapp2.2\OOP.csproj.CoreCompileInputs.cache
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\OOP\obj\Debug\netcoreapp2.2\OOP.dll
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\OOP\obj\Debug\netcoreapp2.2\OOP.pdb
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\OOP\obj\Debug\netcoreapp2.2\OOP.genruntimeconfig.cache

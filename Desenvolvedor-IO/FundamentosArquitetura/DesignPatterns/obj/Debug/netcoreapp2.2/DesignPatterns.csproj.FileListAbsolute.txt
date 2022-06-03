@@ -1,0 +1,13 @@
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\DesignPatterns\bin\Debug\netcoreapp2.2\DesignPatterns.deps.json
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\DesignPatterns\bin\Debug\netcoreapp2.2\DesignPatterns.runtimeconfig.json
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\DesignPatterns\bin\Debug\netcoreapp2.2\DesignPatterns.runtimeconfig.dev.json
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\DesignPatterns\bin\Debug\netcoreapp2.2\DesignPatterns.dll
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\DesignPatterns\bin\Debug\netcoreapp2.2\DesignPatterns.pdb
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\DesignPatterns\obj\Debug\netcoreapp2.2\DesignPatterns.csproj.AssemblyReference.cache
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\DesignPatterns\obj\Debug\netcoreapp2.2\DesignPatterns.GeneratedMSBuildEditorConfig.editorconfig
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\DesignPatterns\obj\Debug\netcoreapp2.2\DesignPatterns.AssemblyInfoInputs.cache
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\DesignPatterns\obj\Debug\netcoreapp2.2\DesignPatterns.AssemblyInfo.cs
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\DesignPatterns\obj\Debug\netcoreapp2.2\DesignPatterns.csproj.CoreCompileInputs.cache
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\DesignPatterns\obj\Debug\netcoreapp2.2\DesignPatterns.dll
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\DesignPatterns\obj\Debug\netcoreapp2.2\DesignPatterns.pdb
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\DesignPatterns\obj\Debug\netcoreapp2.2\DesignPatterns.genruntimeconfig.cache
