@@ -1,0 +1,13 @@
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\SOLID\bin\Debug\netcoreapp2.2\SOLID.deps.json
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\SOLID\bin\Debug\netcoreapp2.2\SOLID.runtimeconfig.json
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\SOLID\bin\Debug\netcoreapp2.2\SOLID.runtimeconfig.dev.json
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\SOLID\bin\Debug\netcoreapp2.2\SOLID.dll
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\SOLID\bin\Debug\netcoreapp2.2\SOLID.pdb
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\SOLID\obj\Debug\netcoreapp2.2\SOLID.csproj.AssemblyReference.cache
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\SOLID\obj\Debug\netcoreapp2.2\SOLID.GeneratedMSBuildEditorConfig.editorconfig
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\SOLID\obj\Debug\netcoreapp2.2\SOLID.AssemblyInfoInputs.cache
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\SOLID\obj\Debug\netcoreapp2.2\SOLID.AssemblyInfo.cs
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\SOLID\obj\Debug\netcoreapp2.2\SOLID.csproj.CoreCompileInputs.cache
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\SOLID\obj\Debug\netcoreapp2.2\SOLID.dll
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\SOLID\obj\Debug\netcoreapp2.2\SOLID.pdb
+C:\TrilhaInovaMobil\GitHub\html-css-javascript-typescript\Desenvolvedor-IO\FundamentosArquitetura\SOLID\obj\Debug\netcoreapp2.2\SOLID.genruntimeconfig.cache

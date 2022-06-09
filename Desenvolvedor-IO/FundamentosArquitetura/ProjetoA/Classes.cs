@@ -1,4 +1,4 @@
-﻿using System.Runtime.CompilerServices;
+﻿ using System.Runtime.CompilerServices;
 
 //[assembly: InternalsVisibleTo("ProjetoB")]
 namespace ProjetoA
@@ -76,16 +76,16 @@ namespace ProjetoA
 
 // Access is not restricted.
 /*******************************************************/
-// protected:
+// protected: //classe ou método que estiver herdando esse tipo de modificador de acesso que podem utiliza-la. Ex: protected Eletrodomestico(string nome, int voltagem)
 
 // Access is limited to the containing class or types
 // derived from the containing class.
 /*******************************************************/
-// internal:
+// internal: //Quem estiver utilizando a classe no mesmo assembly, tem acesso a essa classe ou método. (mesma dll) Exemplo, qualquer classe dentro do projeto A. Se estivesse no projeto B (outra dll) não tem acesso.
 
 // Access is limited to the current assembly.
 /*******************************************************/
-// protected internal:
+// protected internal: //Utilizado para métodos
 
 // Access is limited to the current assembly or types
 // derived from the containing class.
@@ -94,7 +94,7 @@ namespace ProjetoA
 
 // Access is limited to the containing type.
 /*******************************************************/
-// private protected:
+// private protected: //Utilizado para métodos
 
 // Access is limited to the containing class or types
 // derived from the containing class within the current
