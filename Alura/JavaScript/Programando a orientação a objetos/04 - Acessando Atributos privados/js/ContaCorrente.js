@@ -2,9 +2,9 @@ import { Cliente } from "./Cliente.js";
 
 export class ContaCorrente {
 
-    agencia;
-    _saldo = 0;
+    agencia;   
     _cliente;
+    _saldo = 0;
 
     get saldo(){
         return this._saldo;
