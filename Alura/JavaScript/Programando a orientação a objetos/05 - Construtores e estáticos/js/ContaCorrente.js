@@ -2,15 +2,10 @@ import { Cliente } from "./Cliente.js";
 
 export class ContaCorrente {
 
-<<<<<<< HEAD
    static numeroDeContas = 0;
     agencia;   
     _cliente;
-=======
-    agencia;
->>>>>>> parent of ec491d8 (05.02.Construtores)
     _saldo = 0;
-    _cliente;
 
     get saldo(){
         return this._saldo;
