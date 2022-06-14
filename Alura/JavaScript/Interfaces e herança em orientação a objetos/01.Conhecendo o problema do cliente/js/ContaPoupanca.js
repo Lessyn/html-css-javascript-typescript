@@ -2,8 +2,7 @@ export class ContaPoupanca{
     constructor(agencia, cliente, saldoInicial){
         this._agencia = agencia;
         this._cliente = cliente;
-        this._saldo = saldoInicial;       
-        
+        this._saldo = saldoInicial;         
     }
     sacar(valor) {
         if (this._saldo >= valor) {
@@ -24,7 +23,6 @@ export class ContaPoupanca{
             this._saldo += valor;
             console.log("Deposito realizado com sucesso! Seu novo saldo é de: R$" + this._saldo);
         }
-
     }
     transferir(valor, conta) {
         const valorSacado = this.sacar(valor);

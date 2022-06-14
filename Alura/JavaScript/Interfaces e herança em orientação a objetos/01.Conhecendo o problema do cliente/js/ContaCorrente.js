@@ -44,7 +44,6 @@ export class ContaCorrente {
             this._saldo += valor;
             console.log("Deposito realizado com sucesso! Seu novo saldo é de: R$" + this._saldo);
         }
-
     }
     transferir(valor, conta) {
         const valorSacado = this.sacar(valor);
