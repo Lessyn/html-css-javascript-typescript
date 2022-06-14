@@ -1,8 +1,16 @@
+<<<<<<< HEAD
+import { Conta } from "./Conta.js";
+
+export class ContaPoupanca extends Conta{
+    constructor(agencia, cliente, saldoInicial){ 
+        super(agencia, cliente, saldoInicial);             
+=======
 export class ContaPoupanca{
     constructor(agencia, cliente, saldoInicial){
         this._agencia = agencia;
         this._cliente = cliente;
-        this._saldo = saldoInicial;         
+        this._saldo = saldoInicial;       
+        
     }
     sacar(valor) {
         if (this._saldo >= valor) {
@@ -23,10 +31,7 @@ export class ContaPoupanca{
             this._saldo += valor;
             console.log("Deposito realizado com sucesso! Seu novo saldo é de: R$" + this._saldo);
         }
-    }
-    transferir(valor, conta) {
-        const valorSacado = this.sacar(valor);
-        conta.depositar(valorSacado);
-        console.log("Transferência de "+valorSacado+" é realizado com sucesso");
+
+>>>>>>> parent of cf7f472 (01.Conhecendo o problema do cliente)
     }
 }
