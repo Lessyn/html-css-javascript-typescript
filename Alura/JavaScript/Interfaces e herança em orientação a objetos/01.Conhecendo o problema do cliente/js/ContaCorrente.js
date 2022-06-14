@@ -2,11 +2,10 @@ import { Cliente } from "./Cliente.js";
 
 export class ContaCorrente {
 
-   static numeroDeContas = 0;   
-   
-    get saldo(){
-        return this._saldo;
-    }
+   static numeroDeContas = 0;
+    agencia;   
+    _cliente;
+    _saldo = 0;
 
     set cliente(novoValor){
         if(novoValor instanceof Cliente){
@@ -14,14 +13,17 @@ export class ContaCorrente {
         }        
     }
 
+    get saldo(){
+        return this._saldo;
+    }
+
     get cliente(){
         return this._cliente;
     }
 
     constructor(cliente, agencia){
-        this._agencia = agencia;
-        this._cliente = cliente;
-        this._saldo = 0;
+        this.agencia = agencia;
+        this.cliente = cliente;
         ContaCorrente.numeroDeContas += 1;
     }
 
@@ -44,6 +46,7 @@ export class ContaCorrente {
             this._saldo += valor;
             console.log("Deposito realizado com sucesso! Seu novo saldo é de: R$" + this._saldo);
         }
+
     }
     transferir(valor, conta) {
         const valorSacado = this.sacar(valor);
