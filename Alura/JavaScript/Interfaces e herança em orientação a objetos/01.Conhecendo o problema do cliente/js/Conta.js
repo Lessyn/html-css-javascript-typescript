@@ -2,7 +2,7 @@ export class Conta {
     constructor(agencia, cliente, saldoInicial) {
         this._agencia = agencia;
         this._cliente = cliente;
-        this._saldo = saldoInicial;        
+        this._saldo = saldoInicial;
     }
 
     set cliente(novoValor) {
@@ -19,7 +19,10 @@ export class Conta {
     }
     sacar(valor) {
         let taxa = 1;
-    
+        return this._sacar(valor, taxa);
+    }
+
+    _sacar(valor, taxa) {
         const valorSacado = taxa * valor;
         if (this._saldo >= valorSacado) {
             this._saldo -= valorSacado;
@@ -28,8 +31,10 @@ export class Conta {
         }
         else {
             console.log("Saldo indisponível para saque.");
+            return 0;
         }
     }
+
     depositar(valor) {
         if (valor <= 0) {
 
