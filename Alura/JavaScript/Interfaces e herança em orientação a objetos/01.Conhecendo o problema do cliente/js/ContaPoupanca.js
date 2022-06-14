@@ -1,7 +1,32 @@
-import { Conta } from "./Conta.js";
+export class ContaPoupanca{
+    constructor(agencia, cliente, saldoInicial){
+        this._agencia = agencia;
+        this._cliente = cliente;
+        this._saldo = saldoInicial;         
+    }
+    sacar(valor) {
+        if (this._saldo >= valor) {
+            this._saldo -= valor;
+            console.log("O saque de R$" + valor + ", foi realizado com sucesso.");
+            return valor;
+        }
+        else {
+            console.log("Saldo indisponível para saque.");
+        }
+    }
+    depositar(valor) {
+        if (valor <= 0) {
 
-export class ContaPoupanca extends Conta{
-    constructor(agencia, cliente, saldoInicial){ 
-        super(agencia, cliente, saldoInicial);             
+            console.log("Por favor, deposite um valor válido!");
+        }
+        else {            
+            this._saldo += valor;
+            console.log("Deposito realizado com sucesso! Seu novo saldo é de: R$" + this._saldo);
+        }
+    }
+    transferir(valor, conta) {
+        const valorSacado = this.sacar(valor);
+        conta.depositar(valorSacado);
+        console.log("Transferência de "+valorSacado+" é realizado com sucesso");
     }
 }
