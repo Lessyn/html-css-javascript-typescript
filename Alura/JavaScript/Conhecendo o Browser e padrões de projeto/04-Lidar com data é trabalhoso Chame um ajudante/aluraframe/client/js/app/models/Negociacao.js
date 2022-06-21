@@ -18,5 +18,4 @@ class Negociacao{
     get valor(){
         return this._valor;
     }
-
 }
