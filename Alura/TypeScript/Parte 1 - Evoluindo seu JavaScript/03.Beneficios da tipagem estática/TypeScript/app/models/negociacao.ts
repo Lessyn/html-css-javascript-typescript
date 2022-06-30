@@ -20,7 +20,7 @@ export class Negociacao {
         return this._valor;
     }
 
-    get volume() {
+   /* get volume() {
         return this._quantidade * this._valor;
-    }
+    }*/
 }
