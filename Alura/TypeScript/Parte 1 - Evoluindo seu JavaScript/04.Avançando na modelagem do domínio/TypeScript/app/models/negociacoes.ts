@@ -7,8 +7,8 @@ export class Negociacoes {
         this.negociacoes.push(negociacao);
     }
 
-    lista(): Array<Negociacao> {
-        return [...this.negociacoes]; //Essas redicências ajuda a criar uma nova lista na qual será uma referência a lista encapsulada. Nisso a lista a ser apagada será a nova lista criada, tornando essa uma nova referência. Spread Operator. 
+    lista(): ReadonlyArray<Negociacao> { //Utilizando a função Readonly, o problema da lista é resolvido e essa, não é modificada na classe negociacao-controller.
+        return this.negociacoes;  
     }
 
 }
