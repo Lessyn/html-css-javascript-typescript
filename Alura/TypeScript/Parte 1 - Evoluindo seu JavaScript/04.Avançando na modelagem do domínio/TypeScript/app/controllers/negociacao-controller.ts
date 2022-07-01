@@ -18,7 +18,7 @@ export class NegociacaoController {
     adiciona(): void {
         const negociacao = this.criaNegociacao();
         this.negociacoes.adiciona(negociacao);
-        this.negociacoes.lista().pop();
+        this.negociacoes.lista().pop();// Utilizando esse pop, consigo apagar o ultimo array da minha lista. Pra resolver isso, temos uma solução em especificada lá no método lista em negociações.
         console.log(this.negociacoes.lista());
         this.limparFormulario();
     }

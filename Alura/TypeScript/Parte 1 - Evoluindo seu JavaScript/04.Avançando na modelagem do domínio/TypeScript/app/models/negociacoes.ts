@@ -8,7 +8,7 @@ export class Negociacoes {
     }
 
     lista(): Array<Negociacao> {
-        return this.negociacoes;
+        return [...this.negociacoes]; //Essas redicências ajuda a criar uma nova lista na qual será uma referência a lista encapsulada. Nisso a lista a ser apagada será a nova lista criada, tornando essa uma nova referência. Spread Operator. 
     }
 
 }
