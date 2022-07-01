@@ -8,7 +8,7 @@ export class Negociacoes {
     }
 
     lista(): ReadonlyArray<Negociacao> { //Utilizando a função Readonly, o problema da lista é resolvido e essa, não é modificada na classe negociacao-controller.
-        return this.negociacoes;  
+        return this.negociacoes;
     }
 
 }
