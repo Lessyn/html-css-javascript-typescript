@@ -8,14 +8,12 @@ export class NegociacaoController {
         this.inputData = document.querySelector('#data');
         this.inputQuantidade = document.querySelector('#quantidade');
         this.inputValor = document.querySelector('#valor');
-        this.negociacoesView.update();
+        this.negociacoesView.update(this.negociacoes);
     }
     adiciona() {
         const negociacao = this.criaNegociacao();
-        negociacao.data.setDate(19); //Mesmo utilizando o readonly, ainda é possível alterar a data utilzando a propriedade SetDate.
         this.negociacoes.adiciona(negociacao);
-        this.negociacoes.lista(); // Ao tentar colocar o pop, a classe me apresenta um erro.
-        console.log(this.negociacoes.lista());
+        this.negociacoesView.update(this.negociacoes);
         this.limparFormulario();
     }
     criaNegociacao() {
