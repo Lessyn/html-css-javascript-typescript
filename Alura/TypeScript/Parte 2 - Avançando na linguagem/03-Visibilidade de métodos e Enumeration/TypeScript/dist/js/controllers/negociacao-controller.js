@@ -15,9 +15,8 @@ export class NegociacaoController {
     adiciona() {
         const negociacao = this.criaNegociacao();
         this.negociacoes.adiciona(negociacao);
-        this.negociacoesView.update(this.negociacoes);
-        this.mensagemView.update("Negociação adicionada com sucesso!");
         this.limparFormulario();
+        this.atualizaView();
     }
     criaNegociacao() {
         const exp = /-/g; //Expressão regular. Nesse caso a letra "g" significa "global", na qual serão encontrados todas as ocorrências que surgirem.
@@ -31,5 +30,9 @@ export class NegociacaoController {
         this.inputQuantidade.value = '1';
         this.inputValor.value = '0.0';
         this.inputData.focus();
+    }
+    atualizaView() {
+        this.negociacoesView.update(this.negociacoes);
+        this.mensagemView.update("Negociação adicionada com sucesso!");
     }
 }
