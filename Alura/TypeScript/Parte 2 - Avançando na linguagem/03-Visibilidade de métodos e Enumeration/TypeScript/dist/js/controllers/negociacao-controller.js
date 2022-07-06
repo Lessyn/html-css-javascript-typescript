@@ -7,6 +7,8 @@ export class NegociacaoController {
         this.negociacoes = new Negociacoes();
         this.negociacoesView = new NegociacoesView('#negociacoesView');
         this.mensagemView = new MensagemView('#mensagemView');
+        this.DOMINGO = 0;
+        this.SABADO = 6;
         this.inputData = document.querySelector('#data');
         this.inputQuantidade = document.querySelector('#quantidade');
         this.inputValor = document.querySelector('#valor');
@@ -14,14 +16,18 @@ export class NegociacaoController {
     }
     adiciona() {
         const negociacao = this.criaNegociacao();
-        if ((negociacao.data.getDay() > 0) && (negociacao.data.getDay() < 6)) {
+        if (!this.ehDiaUtil(negociacao.data)) {
+            this.mensagemView.update("Negociações só podem ser criadas em dias úteis!");
+            return;
+        }
+        else {
             this.negociacoes.adiciona(negociacao);
             this.limparFormulario();
             this.atualizaView();
         }
-        else {
-            this.mensagemView.update("Negociações só podem ser criadas em dias úteis!");
-        }
+    }
+    ehDiaUtil(data) {
+        return ((data.getDay() > this.DOMINGO) && (data.getDay() < this.SABADO)); //Os dias da semana são representados por número que vão de 0 (domingo) a 6 (sábado).
     }
     criaNegociacao() {
         const exp = /-/g; //Expressão regular. Nesse caso a letra "g" significa "global", na qual serão encontrados todas as ocorrências que surgirem.
