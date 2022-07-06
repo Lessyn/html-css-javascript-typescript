@@ -1,3 +1,4 @@
+import { DiasDaSemana } from "../enums/dias-da-semana.js";
 import { Negociacao } from "../models/negociacao.js";
 import { Negociacoes } from "../models/negociacoes.js";
 import { MensagemView } from "../views/mensagem-view.js";
@@ -7,8 +8,6 @@ export class NegociacaoController {
         this.negociacoes = new Negociacoes();
         this.negociacoesView = new NegociacoesView('#negociacoesView');
         this.mensagemView = new MensagemView('#mensagemView');
-        this.DOMINGO = 0;
-        this.SABADO = 6;
         this.inputData = document.querySelector('#data');
         this.inputQuantidade = document.querySelector('#quantidade');
         this.inputValor = document.querySelector('#valor');
@@ -27,7 +26,8 @@ export class NegociacaoController {
         }
     }
     ehDiaUtil(data) {
-        return ((data.getDay() > this.DOMINGO) && (data.getDay() < this.SABADO)); //Os dias da semana são representados por número que vão de 0 (domingo) a 6 (sábado).
+        return ((data.getDay() > DiasDaSemana.DOMINGO) &&
+            (data.getDay() < DiasDaSemana.SABADO)); //Os dias da semana são representados por número que vão de 0 (domingo) a 6 (sábado).
     }
     criaNegociacao() {
         const exp = /-/g; //Expressão regular. Nesse caso a letra "g" significa "global", na qual serão encontrados todas as ocorrências que surgirem.
