@@ -15,9 +15,9 @@ export class NegociacaoController {
 
     constructor() {
 
-        this.inputData = document.querySelector('#data');
-        this.inputQuantidade = document.querySelector('#quantidade');
-        this.inputValor = document.querySelector('#valor');
+        this.inputData = <HTMLInputElement>document.querySelector('#data'); //O HTMLInputElement pode ser inserido dessa forma ou
+        this.inputQuantidade = document.querySelector('#quantidade') as HTMLInputElement; //dessa forma.
+        this.inputValor = document.querySelector('#valor') as HTMLInputElement;
         this.negociacoesView.update(this.negociacoes);
     }
 
