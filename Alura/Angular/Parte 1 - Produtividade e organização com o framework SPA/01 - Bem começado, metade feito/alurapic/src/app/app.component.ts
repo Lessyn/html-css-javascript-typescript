@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'alurapic';
+  description = 'Leão';
+  url = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/White_Lion.jpg/330px-White_Lion.jpg";
 }
