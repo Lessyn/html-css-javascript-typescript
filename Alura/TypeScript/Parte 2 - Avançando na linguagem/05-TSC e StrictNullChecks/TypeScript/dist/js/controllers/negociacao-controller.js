@@ -16,7 +16,7 @@ export class NegociacaoController {
     adiciona() {
         const negociacao = Negociacao.criaDe(this.inputData.value, this.inputQuantidade.value, this.inputValor.value);
         if (!this.ehDiaUtil(negociacao.data)) {
-            this.mensagemView.update("Negociação só podem ser criadas em dias úteis!");
+            this.mensagemView.update("Negociações só podem ser criadas em dias úteis!");
             return;
         }
         else {
@@ -27,7 +27,7 @@ export class NegociacaoController {
     }
     ehDiaUtil(data) {
         return ((data.getDay() > DiasDaSemana.DOMINGO) &&
-            (data.getDay() < DiasDaSemana.SABADO)); //Os dias da semana são representados por número que vão de 0 (domingo) a 6 (sábado).
+            (data.getDay() < DiasDaSemana.SABADO));
     }
     limparFormulario() {
         this.inputData.value = '';

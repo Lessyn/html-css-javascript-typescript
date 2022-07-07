@@ -28,7 +28,7 @@ export class NegociacaoController {
             this.inputValor.value
         );
         if (!this.ehDiaUtil(negociacao.data)) {
-            this.mensagemView.update("Negociação só podem ser criadas em dias úteis!")
+            this.mensagemView.update("Negociações só podem ser criadas em dias úteis!")
             return;
         }
         else {
