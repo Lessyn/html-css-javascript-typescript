@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +8,11 @@ import {HttpClient} from '@angular/common/http';
 })
 export class AppComponent {
 
-  photos = [];
+  photos:any[] = [];
 
   constructor (http: HttpClient) {
-    console.log(http);
+    http
+    .get<object[]>('http://localhost:3000/flavio/photos')
+    .subscribe(photos => this.photos = photos);
   }
-
 }
