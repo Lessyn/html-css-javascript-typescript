@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-capitulos',
+  selector: 'ap-capitulos',
   templateUrl: './capitulos.component.html',
   styleUrls: ['./capitulos.component.css']
 })
