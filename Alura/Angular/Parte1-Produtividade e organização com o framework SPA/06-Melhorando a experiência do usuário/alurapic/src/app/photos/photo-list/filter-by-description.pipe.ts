@@ -9,7 +9,7 @@ export class FilterByDescritpion implements PipeTransform {
     transform(photos: Photo[], descritpionQuery: string) {
         descritpionQuery = descritpionQuery
             .trim()
-            .toLocaleLowerCase();
+            .toLowerCase();
 
         if (descritpionQuery) {
             return photos.filter(photo => photo.description.toLocaleLowerCase().includes(descritpionQuery));
