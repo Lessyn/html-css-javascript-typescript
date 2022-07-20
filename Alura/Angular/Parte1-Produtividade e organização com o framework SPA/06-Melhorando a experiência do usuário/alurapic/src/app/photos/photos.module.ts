@@ -8,6 +8,7 @@ import { PhotoFormComponent } from './photo-form/photo-form.component';
 import { CapitulosComponent } from './capitulos/capitulos.component';
 import { PhotosComponent } from './photo-list/photos/photos.component';
 import { FilterByDescritpion } from './photo-list/filter-by-description.pipe';
+import { LoadButtonComponent } from './photo-list/load-button/load-button.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ declarations: [PhotoComponent,
                PhotoFormComponent,
                CapitulosComponent,
                PhotosComponent,
-               FilterByDescritpion
+               FilterByDescritpion,
+               LoadButtonComponent
             ],
 imports : [HttpClientModule,
            CommonModule
