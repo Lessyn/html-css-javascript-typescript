@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/core/auth.service';
 
 export class SignInComponent implements OnInit{
 
-    loginForm!: FormGroup;
+    loginForm: FormGroup;
 
     constructor(private formBuilder: FormBuilder,
                 private authService: AuthService) { }
