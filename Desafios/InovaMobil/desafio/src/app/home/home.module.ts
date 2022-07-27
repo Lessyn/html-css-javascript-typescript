@@ -3,14 +3,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
 import { AuthService } from '../core/auth.service';
-import { SigninComponent } from "./signin/signin.component";
+import { SignInComponent } from "./signin/signin.component";
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card'
 import { RouterModule } from "@angular/router";
 
 @NgModule({
     declarations:
-        [SigninComponent],
+        [SignInComponent],
     imports:
         [
         CommonModule,

@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from "@angular/router";
 
 import { AuthService } from 'src/app/core/auth.service';
+import { SignInModel } from './model/signin.model';
 
 
 
@@ -11,10 +12,8 @@ import { AuthService } from 'src/app/core/auth.service';
     templateUrl: './signin.component.html'
 })
 
-
-
-export class SigninComponent implements OnInit{
-    
+export class SignInComponent implements OnInit{
+    storage = window.localStorage
     loginForm: FormGroup;
 
     constructor(private _formBuilder: FormBuilder,
@@ -23,29 +22,21 @@ export class SigninComponent implements OnInit{
               
     ngOnInit(): void {
         this.loginForm = this._formBuilder.group({
-            userName: ['', Validators.required],
-            password: ['', Validators.required]
+            ID: ['', Validators.required],
+            chaveAcesso: ['', Validators.required]
         });
     }
 
     login() {
-        const iD = this.loginForm.get('userName')?.value;
-        const chaveAcesso = this.loginForm.get('password')?.value;
+        const iD = this.loginForm.get('ID')?.value;
+        const chaveAcesso = this.loginForm.get('chaveAcesso')?.value;
 
-        this._authService
+       this._authService.authenticate(iD,chaveAcesso)
+       .subscribe((res: SignInModel) => {
+        const token = res.accessToken
 
-        .authenticate(iD, chaveAcesso)
-        .subscribe((res) =>
-        {
-            console.log(res)
-        }
-            /*.authenticate(iD, chaveAcesso)
-            .subscribe(
-                () => this._router.navigate(['api/produtos']),
-                err => {        
-                console.log(err);
-                this.loginForm.reset();*/
-            
-        );        
+        this.storage.setItem('token', token)
+       })  
     }
+
 }
