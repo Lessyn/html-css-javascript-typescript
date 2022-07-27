@@ -33,10 +33,11 @@ export class SignInComponent implements OnInit{
 
        this._authService.authenticate(iD,chaveAcesso)
        .subscribe((res: SignInModel) => {
-        const token = res.accessToken
-
+        const token = res.accessToken;
         this.storage.setItem('token', token)
+        this._router.navigate(['api/produtos']);
+        
+        console.log(`User ${iD} authenticated with token ${token}`)
        })  
     }
-
 }

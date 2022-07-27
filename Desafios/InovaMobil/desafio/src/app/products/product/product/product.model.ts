@@ -1,4 +1,4 @@
-export interface Product{
+export class ProductModel{
     codigoBarras: string;
     nome: String;
     preco: number;
