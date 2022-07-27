@@ -6,6 +6,7 @@ import { AuthService } from '../core/auth.service';
 import { SigninComponent } from "./signin/signin.component";
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card'
+import { RouterModule } from "@angular/router";
 
 @NgModule({
     declarations:
@@ -16,7 +17,8 @@ import {MatCardModule} from '@angular/material/card'
         ReactiveFormsModule,
         HttpClientModule,
         MatInputModule,
-        MatCardModule
+        MatCardModule,
+        RouterModule
     ],
     exports:[MatInputModule, MatCardModule],
 
