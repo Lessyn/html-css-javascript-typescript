@@ -8,7 +8,10 @@
             <input
              matInput
                 formControlName="ID" 
-                autofocus>          
+                autofocus>
+                <mat-error *ngIf="loginForm.get('ID')?.hasError('required')">
+                    Entre com um usuário.
+                </mat-error>          
         </mat-form-field>
     
         <mat-form-field class="form-group" appearance="outline">
@@ -17,6 +20,9 @@
             matInput
                 formControlName="chaveAcesso" 
                 type="password">
+                <mat-error *ngIf="loginForm.get('chaveAcesso')?.hasError('required')">
+                    Entre com a senha
+                </mat-error>
                                             
         </mat-form-field>
         

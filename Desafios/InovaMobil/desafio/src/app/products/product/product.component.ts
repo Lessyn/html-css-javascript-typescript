@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/core/auth.service';
+import { SignInModel } from 'src/app/home/signin/model/signin.model';
 import { ProductModel } from './product.model';
 
 @Component({
@@ -12,16 +13,13 @@ export class ProductComponent implements OnInit {
 
   constructor(private _authService: AuthService,
               private _formBuilder: FormBuilder){}
-
-  productForm: FormGroup;
+             
+              storage: WindowLocalStorage;
+              productForm: FormGroup;
+  
 
   ngOnInit(): void {
-    this.productForm = this._formBuilder.group({
-      cdBarras: ['', Validators.required],
-      nome: ['', Validators.required],
-      preco: ['',Validators.required],
-      imagem: ['', Validators.required]
-  });
+    this.construirForm()
 }
 
   cadastro() {
@@ -32,16 +30,24 @@ export class ProductComponent implements OnInit {
 
     this._authService.InsereProduto(codigoBarras, nome, preco, base64)
       .subscribe((res:ProductModel) => {
-        const cdBarras = res.codigoBarras;
-        const nome = res.nome;
-        const preco = res.preco;
-        const base64 = res.base64;
-        console.log(cdBarras);
-        console.log(nome);
-        console.log(preco);
-        console.log(base64);
+        const acao = res.acao;
+        const nome = res.nome
+        const sucesso = res.sucesso;
+        console.log(res);               
+        console.log(`A ${acao} de ${nome}, foi realizada com ${sucesso}`)              
 
-      })
+      });
+    }
+
+    construirForm(){
+      this.productForm = this._formBuilder.group({
+        CDBarras: ['', Validators.required],
+        Nome: ['', Validators.required],
+        Preco: ['',Validators.required],
+        Imagem: ['', Validators.required]
+    });
+
+    this.productForm.markAllAsTouched()
     }
   }
-
+  

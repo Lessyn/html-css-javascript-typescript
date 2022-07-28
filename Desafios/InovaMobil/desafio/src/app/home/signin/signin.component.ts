@@ -6,7 +6,6 @@ import { AuthService } from 'src/app/core/auth.service';
 import { SignInModel } from './model/signin.model';
 
 
-
 @Component ({
     styleUrls:  ['./signin.component.css'],
     templateUrl: './signin.component.html'
@@ -22,7 +21,7 @@ export class SignInComponent implements OnInit{
               
     ngOnInit(): void {
         this.loginForm = this._formBuilder.group({
-            ID: ['', Validators.required],
+                     ID: ['', Validators.required],
             chaveAcesso: ['', Validators.required]
         });
     }
@@ -32,7 +31,7 @@ export class SignInComponent implements OnInit{
         const chaveAcesso = this.loginForm.get('chaveAcesso')?.value;
 
        this._authService.authenticate(iD,chaveAcesso)
-       .subscribe((res: SignInModel) => {
+       .subscribe((res:SignInModel) => {
         const token = res.accessToken;
         this.storage.setItem('token', token)
         this._router.navigate(['api/produtos']);
