@@ -1,0 +1,54 @@
+<div class="wrapper">
+  <h4 class="header">Cadastro de Produtos</h4>
+
+
+  <aside class="aside aside-1">
+    <article class="main">
+      <form [formGroup]="productForm" class="form mt-4" (submit)="cadastro()">
+
+        <div>
+          <mat-form-field class="form-group" appearance="legacy">
+            <mat-label>Código de Barras :</mat-label>
+            <input matInput placeholder="Códigos de Barras" type="text" formControlName="CDBarras" required maxlength="50">
+            <mat-icon matSuffix> Código de Barras </mat-icon>            
+          </mat-form-field>
+          <br>
+          <br>
+        </div>
+
+        <div>
+          <mat-form-field class="form-group" appearance="legacy">
+            <mat-label>Nome :</mat-label>
+            <input matInput placeholder="Nome" type="text" formControlName="Nome" required maxlength="50">
+            <mat-icon matSuffix> Nome </mat-icon>            
+          </mat-form-field>
+          <br>
+          <br>
+        </div>
+
+        <div>
+          <mat-form-field class="form-group" appearance="legacy">
+            <mat-label>Preço :</mat-label>
+            <input matInput placeholder="Preço" type="number" formControlName="Preco" required maxlength="50">
+            <mat-icon matSuffix> Preço </mat-icon>            
+          </mat-form-field>
+          <br>
+          <br>
+        </div>
+
+        <div>
+          <mat-form-field class="form-group" appearance="legacy">
+            <mat-label>Imagem :</mat-label>
+            <input matInput placeholder="Imagem" type="text" formControlName="Imagem" required maxlength="50">
+            <mat-icon matSuffix> Imagem </mat-icon>            
+          </mat-form-field>
+          <br>
+          <br>
+        </div>
+
+        <button mat-raised-button color="primary" type="submit">Salvar</button>
+      </form>
+
+    </article>
+  </aside>
+</div>

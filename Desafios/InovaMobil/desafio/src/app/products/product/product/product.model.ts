@@ -1,6 +1,6 @@
 export class ProductModel{
     codigoBarras: string;
-    nome: String;
+    nome: string;
     preco: number;
     base64: string;
 }
