@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from 'src/app/core/auth.service';
+import { AuthService } from 'src/app/core/auth/auth.service';
 import { SignInModel } from 'src/app/home/signin/model/signin.model';
 import { ProductModel } from './product.model';
 
@@ -28,7 +28,7 @@ export class ProductComponent implements OnInit {
     const preco = this.productForm.get('Preco')?.value;
     const base64 = this.productForm.get('imagem')?.value; 
 
-    this._authService.InsereProduto(codigoBarras, nome, preco, base64)
+    this._authService.authenticateProduct(codigoBarras, nome, preco, base64)
       .subscribe((res:ProductModel) => {
         const acao = res.acao;
         const nome = res.nome
