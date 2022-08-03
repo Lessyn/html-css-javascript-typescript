@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { SignInComponent } from "./home/signin/signin.component";
-import { ProductComponent } from "./products/product/product.component";
+import { ProductInsertComponent } from "./products/productInsert/productInsert.component";
 
 const routes: Routes = [
 
@@ -10,7 +10,7 @@ const routes: Routes = [
     }
     ,
     {
-        path:'api/produtos', component: ProductComponent
+        path:'api/produtos', component: ProductInsertComponent
     }   
 
 ];

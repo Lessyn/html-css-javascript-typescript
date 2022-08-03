@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
 import { HomeModule } from './home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ProductModule } from './products/product.module';
+import { ProductModule } from './products/products.module';
 import { CoreModule } from './core/core.module';
 
 @NgModule({

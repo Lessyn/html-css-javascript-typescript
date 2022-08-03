@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { SignInModel } from '../../home/signin/model/signin.model';
-import { ProductModel } from '../../products/product/product.model';
+import { ProductModel } from '../../products/products.model';
 
 const API_URL = 'https://rodrigo.reader.homologacao.inovamobil.com.br';
 

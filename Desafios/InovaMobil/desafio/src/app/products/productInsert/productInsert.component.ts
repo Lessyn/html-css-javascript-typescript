@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/core/auth/auth.service';
 import { SignInModel } from 'src/app/home/signin/model/signin.model';
-import { ProductModel } from './product.model';
+import { ProductModel } from '../products.model';
 
 @Component({
   selector: 'IM-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  templateUrl: './productInsert.component.html',
+  styleUrls: ['./productInsert.component.css']
 })
-export class ProductComponent implements OnInit {
+export class ProductInsertComponent implements OnInit {
 
   constructor(private _authService: AuthService,
               private _formBuilder: FormBuilder){}
