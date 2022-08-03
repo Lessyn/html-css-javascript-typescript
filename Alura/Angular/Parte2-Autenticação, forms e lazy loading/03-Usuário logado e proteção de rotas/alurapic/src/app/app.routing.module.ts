@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthQuard } from './core/auth/auth.guard';
 
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { SignInComponent } from './home/signin/signin.component';
@@ -11,7 +12,8 @@ import { PhotoListResolver } from './photos/photo-list/photo-list.resolver';
 const routes: Routes = [
 
     {
-        path: '', component: SignInComponent
+        path: '', component: SignInComponent,
+        canActivate: [AuthQuard] // implementando o guarda de rotas.
     },
     {
         path: 'user/:userName', component: PhotoListComponent,
