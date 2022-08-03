@@ -28,5 +28,10 @@ private decodeAndNotify() {
     const user = jtw_decode(token) as User;
     this.userSubject.next(user);
 }
+
+logout() {
+    this._tokenService.removeToken();
+    this.userSubject.next(null);
+}
     
 }
