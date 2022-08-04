@@ -1,4 +1,4 @@
-export class ProductModel {
+export class ProductsModel {
     codigoBarras: string;
     nome: string;
     preco: number;

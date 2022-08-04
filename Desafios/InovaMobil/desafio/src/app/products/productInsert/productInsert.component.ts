@@ -1,53 +1,56 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from 'src/app/core/auth/auth.service';
-import { SignInModel } from 'src/app/home/signin/model/signin.model';
-import { ProductModel } from '../products.model';
+import { finalize } from 'rxjs';
+
+import { ProductsModel } from '../products.model';
+import { ProductsService } from '../products.service';
 
 @Component({
   selector: 'IM-product',
   templateUrl: './productInsert.component.html',
-  styleUrls: ['./productInsert.component.css']
+  styleUrls: ['./productInsert.component.css'],
 })
 export class ProductInsertComponent implements OnInit {
+  constructor(
+    private _formBuilder: FormBuilder,
+    private _productsService: ProductsService
+  ) {}
 
-  constructor(private _authService: AuthService,
-              private _formBuilder: FormBuilder){}
-             
-              storage: WindowLocalStorage;
-              productForm: FormGroup;
-  
+  storage: WindowLocalStorage;
+  productForm: FormGroup;
 
   ngOnInit(): void {
-    this.construirForm()
-}
+    this.construirForm();
+  }
 
-  cadastro() {
-    const codigoBarras = this.productForm.get('CDBarras')?.value;
-    const nome = this.productForm.get('Nome')?.value;
-    const preco = this.productForm.get('Preco')?.value;
-    const base64 = this.productForm.get('imagem')?.value; 
+  addProducts() {
+    const produto = this.productForm.getRawValue() as ProductsModel;
 
-    this._authService.authenticateProduct(codigoBarras, nome, preco, base64)
-      .subscribe((res:ProductModel) => {
+    this._productsService.addProducts(produto)
+    .pipe(finalize(()=>  this._productsService.loadProducts().subscribe(res => console.log(res))))
+    .subscribe(
+      (res: any) => {
         const acao = res.acao;
-        const nome = res.nome
-        const sucesso = res.sucesso;
-        console.log(res);               
-        console.log(`A ${acao} de ${nome}, foi realizada com ${sucesso}`)              
 
-      });
-    }
+        if (res.sucesso) {
+          console.log(res);
+          console.log(`A ${acao}, foi realizada com sucesso`);
+        }
+      },
+      (err) => console.log(err)
+    );
 
-    construirForm(){
-      this.productForm = this._formBuilder.group({
-        CDBarras: ['', Validators.required],
-        Nome: ['', Validators.required],
-        Preco: ['',Validators.required],
-        Imagem: ['', Validators.required]
+   
+  }
+
+  construirForm() {
+    this.productForm = this._formBuilder.group({
+      codigoBarras: ['', Validators.required],
+      nome: ['', Validators.required],
+      preco: ['', Validators.required],
+      base64: ['', Validators.required],
     });
 
-    this.productForm.markAllAsTouched()
-    }
+    this.productForm.markAllAsTouched();
   }
-  
+}

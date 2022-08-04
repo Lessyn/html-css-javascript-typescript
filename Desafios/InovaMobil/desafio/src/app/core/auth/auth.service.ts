@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ProductsModel } from 'src/app/products/products.model';
 import { SignInModel } from '../../home/signin/model/signin.model';
-import { ProductModel } from '../../products/products.model';
+
 
 const API_URL = 'https://rodrigo.reader.homologacao.inovamobil.com.br';
 
@@ -22,11 +23,11 @@ export class AuthService{
          
     }
 
-     authenticateProduct(codigoBarras: string, nome: string, preco: number, base64: string): Observable<ProductModel> {
+     /*authenticateProduct(codigoBarras: string, nome: string, preco: number, base64: string): Observable<ProductsModel> {
         return this.http
-        .post<ProductModel>( API_URL + '/api/produtos',
+        .post<ProductsModel>( API_URL + '/api/produtos',
         {codigoBarras, nome, preco, base64})
        
-    }
+    }*/
 }
 

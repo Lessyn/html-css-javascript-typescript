@@ -8,10 +8,9 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from "src/app/app.routing.module";
 import { ProductInsertComponent } from "./productInsert/productInsert.component";
-import { ProdutcDeleteComponent } from './productDelete/produtc-delete/produtc-delete.component';
 
 @NgModule({
-    declarations:[ProductInsertComponent, ProdutcDeleteComponent],
+    declarations:[ProductInsertComponent],
 
     imports:[
         CommonModule,

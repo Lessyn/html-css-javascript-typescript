@@ -4,13 +4,13 @@
 
   <aside class="aside aside-1">
     <article class="main">
-      <form [formGroup]="productForm" class="form mt-4" (submit)="cadastro()">
+      <form [formGroup]="productForm" class="form mt-4" (submit)="addProducts()">
 
         <div>
           <mat-form-field class="form-group" appearance="outline">
             <mat-label>Código de Barras :</mat-label>
-            <input matInput type="text" formControlName="CDBarras" required maxlength="50">
-            <mat-error *ngIf="productForm.get('CDBarras')?.hasError('required')">
+            <input matInput type="text" formControlName="codigoBarras" required maxlength="50">
+            <mat-error *ngIf="productForm.get('codigoBarras')?.hasError('required')">
               Código de barras é requerido!
             </mat-error>                        
           </mat-form-field>
@@ -21,8 +21,8 @@
         <div>
           <mat-form-field class="form-group" appearance="outline">
             <mat-label>Nome :</mat-label>
-            <input matInput type="text" formControlName="Nome" required maxlength="50">
-            <mat-error *ngIf="productForm.get('Nome')?.hasError('required')">
+            <input matInput type="text" formControlName="nome" required maxlength="50">
+            <mat-error *ngIf="productForm.get('nome')?.hasError('required')">
               Nome é requerido!
             </mat-error>                       
           </mat-form-field>
@@ -33,8 +33,8 @@
         <div>
           <mat-form-field class="form-group" appearance="outline">
             <mat-label>Preço :</mat-label>
-            <input matInput type="number" formControlName="Preco" required maxlength="50">
-            <mat-error *ngIf="productForm.get('Preco')?.hasError('required')">
+            <input matInput type="number" formControlName="preco" required maxlength="50">
+            <mat-error *ngIf="productForm.get('preco')?.hasError('required')">
               o preço é requerido!
             </mat-error>                       
           </mat-form-field>
@@ -45,8 +45,8 @@
         <div>
           <mat-form-field class="form-group" appearance="outline">
             <mat-label>Imagem :</mat-label>
-            <input matInput type="text" formControlName="Imagem" required maxlength="50">
-            <mat-error *ngIf="productForm.get('Imagem')?.hasError('required')">
+            <input matInput type="text" formControlName="base64" required maxlength="50">
+            <mat-error *ngIf="productForm.get('base64')?.hasError('required')">
               Imagem requerida!
             </mat-error>                       
           </mat-form-field>
