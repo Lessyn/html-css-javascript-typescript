@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { finalize } from 'rxjs';
 
 import { ProductsModel } from '../products.model';
 import { ProductsService } from '../products.service';
@@ -16,8 +15,7 @@ export class ProductInsertComponent implements OnInit {
     private _productsService: ProductsService
   ) {}
 
-  storage: WindowLocalStorage;
-  productForm: FormGroup;
+ productForm: FormGroup;
 
   ngOnInit(): void {
     this.construirForm();
@@ -25,12 +23,9 @@ export class ProductInsertComponent implements OnInit {
 
   addProducts() {
     const produto = this.productForm.getRawValue() as ProductsModel;
-
-    this._productsService.addProducts(produto)
-    .pipe(finalize(()=>  this._productsService.loadProducts().subscribe(res => console.log(res))))
-    .subscribe(
-      (res: any) => {
-        const acao = res.acao;
+    this._productsService.addProducts(produto)    
+    .subscribe((res: any) => {
+      const acao = res.acao;
 
         if (res.sucesso) {
           console.log(res);
@@ -38,9 +33,7 @@ export class ProductInsertComponent implements OnInit {
         }
       },
       (err) => console.log(err)
-    );
-
-   
+    );   
   }
 
   construirForm() {

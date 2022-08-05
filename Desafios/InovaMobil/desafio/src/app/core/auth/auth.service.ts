@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ProductsModel } from 'src/app/products/products.model';
-import { SignInModel } from '../../home/signin/model/signin.model';
+import { SignInModel } from 'src/app/home/signin/model/signin.model';
+
 
 
 const API_URL = 'https://rodrigo.reader.homologacao.inovamobil.com.br';

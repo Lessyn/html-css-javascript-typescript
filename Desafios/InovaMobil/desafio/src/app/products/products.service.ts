@@ -1,8 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+
 import { TokenService } from '../core/token/token.service';
-import { ProductInsertComponent } from './productInsert/productInsert.component';
 import { ProductsModel } from './products.model';
 
 const API_URL = 'https://rodrigo.reader.homologacao.inovamobil.com.br';
