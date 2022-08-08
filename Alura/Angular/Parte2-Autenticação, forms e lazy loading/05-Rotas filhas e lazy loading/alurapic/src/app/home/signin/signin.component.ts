@@ -23,6 +23,8 @@ export class SignInComponent implements OnInit{
             userName: ['', Validators.required],
             password: ['', Validators.required]
         });
+        this._platformDetectorService.isPlatformBrowser() && //detecta em qual plataforma a aplicação está sendo executada que nesse caso aqui, é um browser. E quando é um browser, ele aplica um focus no login.
+                this.userNameInput.nativeElement.focus();
         
     }
 

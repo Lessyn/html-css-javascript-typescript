@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { PlatformDetectorService } from 'src/app/core/plataform-detector/platform-detector.service';
 import { lowerCaseValidator } from 'src/app/shared/validators/lower-case.validator';
 import { NewUser } from './new-user';
 import { SignUpService } from './signup.service';
@@ -12,12 +13,14 @@ import { UserNotTakenValidatorService } from './user-not-taken.validator.service
 export class SignUpComponent implements OnInit {
 
     signupForm: FormGroup;
+    @ViewChild('emailInput') emailInput: ElementRef<HTMLInputElement>
 
     constructor(
         private _formBuilder: FormBuilder,
         private _userNotTakenValidatorService: UserNotTakenValidatorService,
         private _signUpService: SignUpService,
-        private _router: Router){ }   
+        private _router: Router,
+        private _platformDetectorService: PlatformDetectorService){ }   
 
     ngOnInit(): void {
        
@@ -55,6 +58,9 @@ export class SignUpComponent implements OnInit {
         ]
 
         });
+
+        this._platformDetectorService.isPlatformBrowser() && //detecta em qual plataforma a aplicação está sendo executada que nesse caso aqui, é um browser. E quando é um browser, ele aplica um focus no login.
+        this.emailInput.nativeElement.focus();
     }
     signup(){
         const newUser = this.signupForm.getRawValue() as NewUser;
