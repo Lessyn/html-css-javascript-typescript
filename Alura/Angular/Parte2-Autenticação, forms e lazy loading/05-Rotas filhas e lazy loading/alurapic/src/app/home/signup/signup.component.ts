@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PlatformDetectorService } from 'src/app/core/plataform-detector/platform-detector.service';
@@ -20,7 +20,8 @@ export class SignUpComponent implements OnInit {
         private _userNotTakenValidatorService: UserNotTakenValidatorService,
         private _signUpService: SignUpService,
         private _router: Router,
-        private _platformDetectorService: PlatformDetectorService){ }   
+        private _platformDetectorService: PlatformDetectorService,
+        private _changeDetectorRef: ChangeDetectorRef){ }   
 
     ngOnInit(): void {
        
@@ -57,11 +58,15 @@ export class SignUpComponent implements OnInit {
                 ]
         ]
 
-        });
-
-        this._platformDetectorService.isPlatformBrowser() && //detecta em qual plataforma a aplicação está sendo executada que nesse caso aqui, é um browser. E quando é um browser, ele aplica um focus no login.
-        this.emailInput.nativeElement.focus();
+        });        
     }
+
+    ngAfterViewInit(): void {    
+        this._platformDetectorService.isPlatformBrowser() && //detecta em qual plataforma a aplicação está sendo executada que nesse caso aqui, é um browser. E quando é um browser, ele aplica um focus no login.
+        this.emailInput.nativeElement.focus()
+        this._changeDetectorRef.detectChanges()
+
+      }
     signup(){
         const newUser = this.signupForm.getRawValue() as NewUser;
         this._signUpService

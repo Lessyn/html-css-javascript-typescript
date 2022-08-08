@@ -1,11 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthQuard } from './core/auth/auth.guard';
 
 import { NotFoundComponent } from './errors/not-found/not-found.component';
-import { HomeComponent } from './home/home.component';
-import { SignInComponent } from './home/signin/signin.component';
-import { SignUpComponent } from './home/signup/signup.component';
 import { CapitulosComponent } from './photos/capitulos/capitulos.component';
 import { PhotoFormComponent } from './photos/photo-form/photo-form.component';
 import { PhotoListComponent } from './photos/photo-list/photo-list.component';
@@ -15,20 +11,14 @@ const routes: Routes = [
 
     {
         path: '',
-        component: HomeComponent,
-        canActivate: [AuthQuard], // implementando o guarda de rotas.
-        children: [
-            {
-                path: '',
-                component: SignInComponent,
-                
-            },
+        pathMatch: 'full',
+        redirectTo: 'home'
+    },
 
-            {
-                path: 'signup',
-                component: SignUpComponent
-            },
-        ]
+    {
+        path: 'home',
+        loadChildren: () => import('./home/home.module').then(h => h.HomeModule)
+       
     },
    
     {
@@ -37,12 +27,15 @@ const routes: Routes = [
             photos: PhotoListResolver
         }
     },
+
     {
         path: 'capitulos', component: CapitulosComponent
     },
+
     {
         path: 'p/add', component: PhotoFormComponent
     },
+
     {
         path: '**', component: NotFoundComponent
     }
