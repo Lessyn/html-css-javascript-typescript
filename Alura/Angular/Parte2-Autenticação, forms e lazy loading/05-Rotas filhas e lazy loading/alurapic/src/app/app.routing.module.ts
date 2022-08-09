@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthQuard } from './core/auth/auth.guard';
 
 import { NotFoundComponent } from './errors/not-found/not-found.component';
+import { HomeComponent } from './home/home.component';
 import { CapitulosComponent } from './photos/capitulos/capitulos.component';
 import { PhotoFormComponent } from './photos/photo-form/photo-form.component';
 import { PhotoListComponent } from './photos/photo-list/photo-list.component';
@@ -16,7 +18,7 @@ const routes: Routes = [
     },
 
     {
-        path: 'home',
+        path: 'home',       
         loadChildren: () => import('./home/home.module').then(h => h.HomeModule)
        
     },
@@ -26,6 +28,7 @@ const routes: Routes = [
         resolve: {
             photos: PhotoListResolver
         }
+    
     },
 
     {

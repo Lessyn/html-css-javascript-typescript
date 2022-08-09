@@ -63,7 +63,7 @@ export class SignUpComponent implements OnInit {
 
     ngAfterViewInit(): void {    
         this._platformDetectorService.isPlatformBrowser() && //detecta em qual plataforma a aplicação está sendo executada que nesse caso aqui, é um browser. E quando é um browser, ele aplica um focus no login.
-        this.emailInput.nativeElement.focus()
+        this.emailInput.nativeElement.focus();
         this._changeDetectorRef.detectChanges()
 
       }
