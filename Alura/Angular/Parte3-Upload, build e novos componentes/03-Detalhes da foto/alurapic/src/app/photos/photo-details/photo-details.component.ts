@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'ap-photo-details',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhotoDetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _route:ActivatedRoute) { }
 
   ngOnInit(): void {
+    const id = this._route.snapshot.params['photoId'];
+    console.log(id);
   }
 
 }
