@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthQuard } from './core/auth/auth.guard';
+
+import { AuthGuard } from './core/auth/auth.guard';
 
 import { NotFoundComponent } from './errors/not-found/not-found.component';
-import { HomeComponent } from './home/home.component';
 import { CapitulosComponent } from './photos/capitulos/capitulos.component';
 import { PhotoFormComponent } from './photos/photo-form/photo-form.component';
 import { PhotoListComponent } from './photos/photo-list/photo-list.component';
@@ -24,7 +24,8 @@ const routes: Routes = [
     },
    
     {
-        path: 'user/:userName', component: PhotoListComponent,
+        path: 'user/:userName',
+        component: PhotoListComponent,
         resolve: {
             photos: PhotoListResolver
         }
@@ -32,15 +33,19 @@ const routes: Routes = [
     },
 
     {
-        path: 'capitulos', component: CapitulosComponent
+        path: 'capitulos',
+        component: CapitulosComponent
     },
 
     {
-        path: 'p/add', component: PhotoFormComponent
+        path: 'p/add',
+        component: PhotoFormComponent,
+        canActivate:[AuthGuard]
     },
 
     {
-        path: '**', component: NotFoundComponent
+        path: '**',
+        component: NotFoundComponent
     }
 ];
 
