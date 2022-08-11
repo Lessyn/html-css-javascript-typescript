@@ -8,11 +8,11 @@ const API = 'http://localhost:3000';
 
 export class PhotoService {
 
-    constructor(private http: HttpClient) { }
+    constructor(private _http: HttpClient) { }
 
     listFromUser(userName: string) {
 
-        return this.http
+        return this._http
             .get<Photo[]>(API + '/' + userName + '/photos');
 
     }
@@ -20,7 +20,7 @@ export class PhotoService {
     listFromUserPaginated(userName: string, page: number) {
         const params = new HttpParams()
         .append('page', page.toString());
-        return this.http
+        return this._http
             .get<Photo[]>(API + '/' + userName + '/photos', { params });
 
     }
@@ -32,6 +32,10 @@ export class PhotoService {
         formData.append('allowComments', allowComments? 'true' : 'false');
         formData.append('imageFile', file);
 
-        return this.http.post(API+ '/photos/upload', formData);
+        return this._http.post(API+ '/photos/upload', formData);
+    }
+
+    findById(id: string){
+        return this._http.get<Photo>(API + '/photos/' +id);
     }
 }
