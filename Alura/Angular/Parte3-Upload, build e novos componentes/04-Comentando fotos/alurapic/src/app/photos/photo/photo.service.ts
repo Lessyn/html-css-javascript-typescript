@@ -45,4 +45,8 @@ export class PhotoService {
     getComments(photoId: number) {
         return this._http.get<PhotoComment[]>(API +'/photos/' + photoId + '/comments');
     }
+
+    addComment(photoId: number, commentText: string){
+        return this._http.post(API + '/photos/' + photoId + '/comments', { commentText});
+    }
 }
