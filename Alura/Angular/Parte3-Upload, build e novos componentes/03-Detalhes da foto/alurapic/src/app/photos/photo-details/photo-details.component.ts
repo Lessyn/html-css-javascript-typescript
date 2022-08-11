@@ -24,5 +24,4 @@ export class PhotoDetailsComponent implements OnInit {
                   .findById(this._route.snapshot.params['photoId']);
 
   }
-
 }
