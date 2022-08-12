@@ -29,6 +29,11 @@ export class PhotoDetailsComponent implements OnInit {
     
     this.photoId = this._route.snapshot.params['photoId'];
     this.photo$ = this._photoService.findById(this.photoId);
+    this.photo$.subscribe(() => {}, err => {
+        console.log(err);
+        this._router.navigate(['not-found']);
+    })
+
       }
 
       remove(){
