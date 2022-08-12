@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { NavigationStart, Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { Alert, AlertType } from './alert';
 
@@ -10,28 +11,48 @@ export class AlertService{
 
     alertSubject: Subject<Alert> = new Subject<Alert>();
 
-    sucess(message: string){
-        this._alert(AlertType.SUCESS, message); 
+    keepAfterRouteChange = false;
+
+    constructor(private router: Router){
+
+        router.events.subscribe(event => {
+            if (event instanceof NavigationStart){
+                if(this.keepAfterRouteChange){
+                    this.keepAfterRouteChange = false;
+                }
+                else{
+                    this.clear();                      
+                }
+            }
+        })
     }
 
-    warning(message: string){
-        this._alert(AlertType.WARNING, message);
+    sucess(message: string, keepAfterRouteChange: boolean = false){
+        this._alert(AlertType.SUCESS, message, keepAfterRouteChange); 
     }
 
-    danger(message: string){
-        this._alert(AlertType.DANGER, message);
+    warning(message: string, keepAfterRouteChange: boolean = false){
+        this._alert(AlertType.WARNING, message, keepAfterRouteChange);
     }
 
-    info(message: string){
-        this._alert(AlertType.INFO, message);
+    danger(message: string, keepAfterRouteChange: boolean = false){
+        this._alert(AlertType.DANGER, message, keepAfterRouteChange);
     }
 
-    private _alert(alertType: AlertType, message: string){
+    info(message: string, keepAfterRouteChange: boolean = false){
+        this._alert(AlertType.INFO, message, keepAfterRouteChange);
+    }
 
+    private _alert(alertType: AlertType, message: string, keepAfterRouteChange: boolean){
+        this.keepAfterRouteChange = keepAfterRouteChange;
         this.alertSubject.next(new Alert(alertType, message));
     }
 
     getAlert(){
         return this.alertSubject.asObservable(); 
+    }
+
+    clear(){
+        this.alertSubject.next(null);
     }
 }
