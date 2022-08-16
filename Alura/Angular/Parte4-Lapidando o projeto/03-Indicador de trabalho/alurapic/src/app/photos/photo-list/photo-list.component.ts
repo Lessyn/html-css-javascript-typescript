@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { LoadingService } from 'src/app/shared/loading/loading.service';
 
 import { Photo } from '../photo/photo';
 import { PhotoService } from '../photo/photo.service';
@@ -17,17 +18,19 @@ export class PhotoListComponent implements OnInit{
   currentPage: number = 1;
   userName: string = '';  
 
-  constructor(private activatedRoute: ActivatedRoute, private photoService: PhotoService) { }  
+  constructor(
+    private _activatedRoute: ActivatedRoute,
+    private _photoService: PhotoService) { }  
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params => {
+    this._activatedRoute.params.subscribe(params => {
       this.userName = params['userName'];
-      this.photos = this.activatedRoute.snapshot.data['photos'];    
+      this.photos = this._activatedRoute.snapshot.data['photos'];    
     });
   }
 
   load(){
-    this.photoService
+    this._photoService
     .listFromUserPaginated(this.userName, ++this.currentPage)
     .subscribe(photos => {
       this.filter = '';

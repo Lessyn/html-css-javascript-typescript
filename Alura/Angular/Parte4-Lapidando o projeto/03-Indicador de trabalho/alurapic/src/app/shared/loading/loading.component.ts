@@ -5,7 +5,8 @@ import { LoadingService } from './loading.service';
 
 @Component({
     selector: 'ap-loading',
-    templateUrl: './loading.component.html'
+    templateUrl: './loading.component.html',
+    styleUrls: ['loading.component.css']
 })
 export class LoadingComponent implements OnInit{
 
@@ -15,6 +16,6 @@ export class LoadingComponent implements OnInit{
     ngOnInit(): void {
         this.loading$ = this._loadingService
             .getLoading()
-            .pipe(map(LoadingType => LoadingType.valueOf()))
+            .pipe(map(loadingType => loadingType.valueOf()))
     }
 }
