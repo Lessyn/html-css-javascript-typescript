@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/auth/auth.service';
 import { PlatformDetectorService } from 'src/app/core/plataform-detector/platform-detector.service';
@@ -17,9 +18,11 @@ export class SignInComponent implements OnInit{
                 private _authService: AuthService,
                 private _router: Router,
                 private _platformDetectorService: PlatformDetectorService,
-                private _changeDetectorRef: ChangeDetectorRef) { }
+                private _changeDetectorRef: ChangeDetectorRef,
+                private _titleService: Title) { }
 
     ngOnInit(): void {
+        this._titleService.setTitle('Login');
         this.loginForm = this._formBuilder.group({
             userName: ['', Validators.required],
             password: ['', Validators.required]
