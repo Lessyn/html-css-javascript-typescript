@@ -19,7 +19,7 @@ export class LoadingService{
         this.loadingSubject.next(LoadingType.LOADING);
     }
 
-    stopped(){
+    stop(){
         this.loadingSubject.next(LoadingType.STOPPED);
     }
 }
