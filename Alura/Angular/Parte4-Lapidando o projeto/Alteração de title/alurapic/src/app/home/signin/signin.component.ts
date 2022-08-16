@@ -18,11 +18,9 @@ export class SignInComponent implements OnInit{
                 private _authService: AuthService,
                 private _router: Router,
                 private _platformDetectorService: PlatformDetectorService,
-                private _changeDetectorRef: ChangeDetectorRef,
-                private _titleService: Title) { }
+                private _changeDetectorRef: ChangeDetectorRef) { }
 
-    ngOnInit(): void {
-        this._titleService.setTitle('Login');
+    ngOnInit(): void {        
         this.loginForm = this._formBuilder.group({
             userName: ['', Validators.required],
             password: ['', Validators.required]
