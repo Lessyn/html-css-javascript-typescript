@@ -1,11 +1,13 @@
 import { ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+
 import { PlatformDetectorService } from 'src/app/core/plataform-detector/platform-detector.service';
 import { lowerCaseValidator } from 'src/app/shared/validators/lower-case.validator';
 import { NewUser } from './new-user';
 import { SignUpService } from './signup.service';
 import { UserNotTakenValidatorService } from './user-not-taken.validator.service';
+import { userNamePassword } from './username-password.validator';
 
 @Component({
     templateUrl:'./signup.component.html',
@@ -59,7 +61,12 @@ export class SignUpComponent implements OnInit {
                 ]
         ]
 
-        });        
+        }, 
+        {
+           validator: userNamePassword
+        }
+        
+        );        
     }
 
     ngAfterViewInit(): void {    
