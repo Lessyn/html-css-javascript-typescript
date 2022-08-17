@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class MenuComponent{
     isShow = false;
 
-    toogle() {
+    toggle() {
         this.isShow = !this.isShow;
     }
 }
