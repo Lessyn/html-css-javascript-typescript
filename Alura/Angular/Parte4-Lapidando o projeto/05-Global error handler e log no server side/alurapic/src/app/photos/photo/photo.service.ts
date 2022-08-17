@@ -26,7 +26,7 @@ export class PhotoService {
         const params = new HttpParams()
         .append('page', page.toString());
         return this._http
-            .get<Photo[]>(API + '/' + userName + '/photos', { params });
+            .get<Photo[]>(API + '/' + userName + '/photosx', { params });
 
     }
 
