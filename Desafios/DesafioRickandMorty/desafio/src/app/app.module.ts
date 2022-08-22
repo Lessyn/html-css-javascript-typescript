@@ -1,22 +1,26 @@
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PersonagensComponent } from './personagens/personagens.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { PersonagensModule } from './personagens/personagens.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PersonagensComponent
+    AppComponent,    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    CommonModule
+    AppRoutingModule,       
+    CommonModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    FlexLayoutModule,
+    PersonagensModule
   ],
   providers: [],
   bootstrap: [AppComponent]
