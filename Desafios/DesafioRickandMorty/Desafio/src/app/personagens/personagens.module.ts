@@ -5,9 +5,10 @@ import { CommonModule } from '@angular/common';
 import { PersonagemComponent } from './personagem/personagem.component';
 import { PersonagemListaComponent } from './personagem-lista/personagem-lista.component';
 import { PersonagemIndividualComponent } from './personagem-individual/personagem-individual.component';
+import { PersonagensComponent } from './personagem-lista/personagens/personagens.component';
 
 @NgModule({
-    declarations: [PersonagemComponent, PersonagemListaComponent, PersonagemIndividualComponent],    
+    declarations: [PersonagemComponent, PersonagemListaComponent, PersonagemIndividualComponent, PersonagensComponent],    
     imports: [HttpClientModule, CommonModule]
 })
 
