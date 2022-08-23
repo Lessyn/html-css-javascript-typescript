@@ -1,1 +1,11 @@
+<div class="text-center mt-3 mb-3">
+  <form>
+    <input
+    class="rounded" 
+    type="search"
+    placeholder="localizar..."
+    autofocus
+    (keyup)="filtro = $any($event.target).value">
+  </form>
+</div>
 <rm-personagens [personagens]="personagens"></rm-personagens>

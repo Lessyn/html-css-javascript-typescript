@@ -10,6 +10,7 @@ import { PersonagemService } from '../personagem/personagem.service';
 export class PersonagemListaComponent implements OnInit {
 
   personagens: PersonagemModel[] = [];
+  filtro: string = '';
 
   constructor(private _personagemService: PersonagemService){ }
 
