@@ -1,1 +1,9 @@
-<img  class="img-thumbnail" [src]="image" [alt]="name">
+<div class="container">
+    <div class="card" style="width:10rem;">
+        <img class="card-img-top" [src]="image" [alt]="name" [alt]="species">
+        <div class="card-body text-center">
+            <h5 class="card-title"> {{name}} </h5>
+            <p class="card-text"> {{species}} </p>
+        </div>    
+    </div>
+</div>

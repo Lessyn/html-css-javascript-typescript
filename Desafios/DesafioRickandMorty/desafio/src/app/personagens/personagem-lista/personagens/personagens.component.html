@@ -3,7 +3,8 @@
         <div *ngFor="let personagem of colunas" class="col-3">
             <rm-personagem      
               [image] = "personagem.image"
-              [name] = "personagem.name">
+              [name] = "personagem.name"
+              [species]="personagem.species">              
             </rm-personagem>
         </div>
     </li>

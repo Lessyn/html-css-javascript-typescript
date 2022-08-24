@@ -10,7 +10,8 @@ export class PersonagemComponent implements OnInit {
   constructor() { }
 
   @Input() image = ''; 
-  @Input() name = '' ; 
+  @Input() name = '' ;
+  @Input() species = ''; 
 
   ngOnInit(): void {
   }

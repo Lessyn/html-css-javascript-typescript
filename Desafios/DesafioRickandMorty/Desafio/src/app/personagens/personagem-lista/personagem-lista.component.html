@@ -1,11 +1,32 @@
-<div class="text-center mt-3 mb-3">
-  <form>
-    <input
-    class="rounded" 
-    type="search"
-    placeholder="localizar..."
-    autofocus
-    (keyup)="filtro = $any($event.target).value">
-  </form>
+<div class="container">
+  <div class=" mt-5 mb-5">
+    <form>
+      <input
+        class="rounded" 
+        type="search"
+        placeholder="Filter by name..."
+        autofocus
+        (keyup)="filtro = $any($event.target).value">      
+    </form>
+  </div>
+
+  <div class="dropdown">
+    <button class="rounded dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      Species
+    </button>
+  </div>
+  
+  <div class="dropdown">
+    <button class="rounded dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"         aria-haspopup="true" aria-expanded="false">
+        Gender
+    </button>
+  </div>
+  
+  <div class="dropdown">
+    <button class="rounded dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"   aria-haspopup="true" aria-expanded="false">
+        Status
+      </button>
+  </div>
 </div>
-<rm-personagens [personagens]="personagens"></rm-personagens>
+
+<rm-personagens [personagens]="personagens | filtroPorNome: filtro"></rm-personagens>
