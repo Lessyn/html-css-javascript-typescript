@@ -1,32 +1,34 @@
-<div class="container">
-  <div class=" mt-5 mb-5">
-    <form>
-      <input
-        class="rounded" 
-        type="search"
-        placeholder="Filter by name..."
-        autofocus
-        (keyup)="filtro = $any($event.target).value">      
-    </form>
-  </div>
-
-  <div class="dropdown">
-    <button class="rounded dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      Species
-    </button>
-  </div>
+<form class="container">
+  <div class= "container text-center">
+    <div class="btn mt-5 mb-5">
+      <i class="fa fa-search"></i>      
+        <input
+          class="rounded" 
+          type="search"
+          placeholder="Filter by name..."
+          autofocus
+          (keyup)="debounce.next($any($event.target).value)">    
+    </div>
   
-  <div class="dropdown">
-    <button class="rounded dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"         aria-haspopup="true" aria-expanded="false">
-        Gender
-    </button>
-  </div>
-  
-  <div class="dropdown">
-    <button class="rounded dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"   aria-haspopup="true" aria-expanded="false">
-        Status
+    <div class="btn mt-5 mb-5">
+      <button class="rounded dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Species
       </button>
+    </div>
+    
+    <div class="btn mt-5 mb-5">
+      <button class="rounded dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"         aria-haspopup="true" aria-expanded="false">
+          Gender
+      </button>
+    </div>
+    
+    <div class="btn mt-5 mb-5">
+      <button class="rounded dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"   aria-haspopup="true" aria-expanded="false">
+          Status
+        </button>
+    </div>
   </div>
-</div>
+  </form>
 
 <rm-personagens [personagens]="personagens | filtroPorNome: filtro"></rm-personagens>
+<rm-botao-load (click)="load()" [exibirMais]="exibirMais"></rm-botao-load>

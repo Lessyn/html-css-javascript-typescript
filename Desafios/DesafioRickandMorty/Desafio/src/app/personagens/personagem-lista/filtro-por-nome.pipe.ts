@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+
 import { PersonagemModel } from '../personagem/personagem.model';
 
 @Pipe({ name: 'filtroPorNome' })

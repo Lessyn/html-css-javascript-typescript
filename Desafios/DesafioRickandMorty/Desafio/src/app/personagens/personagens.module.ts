@@ -1,24 +1,16 @@
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
-import { PersonagemComponent } from './personagem/personagem.component';
-import { PersonagemListaComponent } from './personagem-lista/personagem-lista.component';
-import { PersonagemIndividualComponent } from './personagem-individual/personagem-individual.component';
-import { PersonagensComponent } from './personagem-lista/personagens/personagens.component';
-import { FiltroPorNome } from './personagem-lista/Filtro-por-nome.pipe';
+import { PersonagemModule } from './personagem/personagem.module';
+import { PersonagemIndividualModule } from './personagem-individual/personagem-individual.module';
+import { PersonagemListaModule } from './personagem-lista/personagem-lista.module';
 
-@NgModule({
-    declarations: [
-        PersonagemComponent,
-        PersonagemListaComponent,
-        PersonagemIndividualComponent,
-        PersonagensComponent,
-        FiltroPorNome
-    ],    
+@NgModule({     
+     
     imports: [
-        HttpClientModule,
-        CommonModule]
+        PersonagemModule,
+        PersonagemIndividualModule,
+        PersonagemListaModule,
+    ]
 })
 
 export class PersonagensModule{}
