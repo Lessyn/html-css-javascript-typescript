@@ -1,29 +1,30 @@
-<form class="container">
-  <div class= "container text-center">
-    <div class="btn mt-5 mb-5">
-      <i class="fa fa-search"></i>      
+<form class="container">  
+  <div class= " row-1 mb-5 mt-5">
+    <div class="btn col-3">
+      <i class="rounded"></i>      
         <input
-          class="rounded" 
+          class="rounded"  
+          style="width:238px; height:45px;font-family:FontAwesome"
           type="search"
-          placeholder="Filter by name..."
+          placeholder= "&#xF002; Filter by name..."
           autofocus
           (keyup)="debounce.next($any($event.target).value)">    
     </div>
   
-    <div class="btn mt-5 mb-5">
-      <button class="rounded dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <div class="btn col-3">
+      <button class="rounded dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:238px; height:45px;font-family:FontAwesome">
         Species
       </button>
     </div>
     
-    <div class="btn mt-5 mb-5">
-      <button class="rounded dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"         aria-haspopup="true" aria-expanded="false">
+    <div class="btn col-3">
+      <button class="rounded dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"         aria-haspopup="true" aria-expanded="false" style="width:238px; height:45px;font-family:FontAwesome">
           Gender
       </button>
     </div>
     
-    <div class="btn mt-5 mb-5">
-      <button class="rounded dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"   aria-haspopup="true" aria-expanded="false">
+    <div class="btn col-3">
+      <button class="rounded dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"   aria-haspopup="true" aria-expanded="false" style="width:238px; height:45px;font-family:FontAwesome">
           Status
         </button>
     </div>

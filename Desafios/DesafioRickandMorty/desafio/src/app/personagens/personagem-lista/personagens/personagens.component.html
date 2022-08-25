@@ -1,5 +1,5 @@
-<ol class="list-unstyled">
-    <li *ngFor="let colunas of linhas" class="row no-gutters">
+<ol class=" container list-unstyled">
+    <li *ngFor="let colunas of linhas" class="row mb-5">
         <div *ngFor="let personagem of colunas" class="col-3">
             <rm-personagem      
               [image] = "personagem.image"
