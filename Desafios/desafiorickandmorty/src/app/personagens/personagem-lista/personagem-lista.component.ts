@@ -1,8 +1,9 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { debounceTime, pipe, Subject, timeout } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { debounceTime, Subject } from 'rxjs';
 
 import { Personagem } from '../personagem/personagem.model';
 import { PersonagemService } from '../personagem/personagem.service';
+import { Food } from './food.model';
 
 @Component({
   selector: 'rm-personagem-lista',
@@ -10,6 +11,16 @@ import { PersonagemService } from '../personagem/personagem.service';
   styleUrls: ['./personagem-lista.component.css'],
 })
 export class PersonagemListaComponent implements OnInit {
+  
+  foods: Food[] = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'},
+  ];
+
+  
+  valueFilter = 'Clear me';
+
   filtroPorNome: string = '';
   personagens: Personagem[] = [];
 
@@ -73,16 +84,18 @@ export class PersonagemListaComponent implements OnInit {
 
   filtroNome(name: string) {
     this.opcoesFiltroName.push(name);
-    if(this.opcoesFiltroName.length > 1) this.opcoesFiltroName.shift();
-    this._personagemService.getFiltro(
-      this.opcoesFiltroName,
-      this.opcoesFiltroSpecies,
-      this.opcoesFiltroGender,
-      this.opcoesFiltroStatus
-    ).subscribe((res) => {
-      this.personagens = res.results;
-      console.log(this.personagens);
-    });
+    if (this.opcoesFiltroName.length > 1) this.opcoesFiltroName.shift();
+    this._personagemService
+      .getFiltro(
+        this.opcoesFiltroName,
+        this.opcoesFiltroSpecies,
+        this.opcoesFiltroGender,
+        this.opcoesFiltroStatus
+      )
+      .subscribe((res) => {
+        this.personagens = res.results;
+        console.log(this.personagens);
+      });
   }
 
   //-- Inicio dos filtros individuais --

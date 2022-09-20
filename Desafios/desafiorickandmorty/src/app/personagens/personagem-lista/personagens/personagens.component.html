@@ -1,7 +1,7 @@
 <ol class=" container list-unstyled">
     <li *ngFor="let colunas of linhas" class="row mb-5">
-        <div *ngFor="let personagem of colunas" class="col-3">
-          <a [routerLink]="['/character', personagem.id]">
+        <div *ngFor="let personagem of colunas" class="col-3" style="text-align:center">
+          <a style="text-decoration: none;  color: inherit" [routerLink]="['/character', personagem.id]">
             <rm-personagem 
               (click)="clicouIndividual(personagem.id)"     
               [image] = "personagem.image" 

@@ -2,97 +2,61 @@
   <img src="../../../assets/img/rickandmorty.svg" alt="Imagem RickandMorty" />
 </div>
 
-<form class="container text-align">
-  <div class="col-12 mb-5 mt-5" style="display: flex; text-align: center">
-    <div class="col-3">
-      <div class="btn">
-        <input
-          class="rounded filtro"
-          style="width: 238px; height: 45px; font-family: FontAwesome"
-          type="search"
-          placeholder="&#xF002; Filtro por nome..."
-          autofocus
-          (keyup)="debounce.next($any($event.target).value)"
-        />
-      </div>
-    </div>
 
-    <div class="col-3">
-      <div class="btn">
-        <button
-          class="rounded dropdown-toggle"
-          type="button"
-          id="dropdownMenuButton"
-          data-bs-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-          style="width: 238px; height: 45px"
-        >
-          Species
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a
-            class="dropdown-item"
-            (click)="clicouSpecie(species)"
-            *ngFor="let species of SpeciesFiltrado; let i = index"
-          >
-            {{ species }}
-          </a>
-        </div>
-      </div>
-    </div>
+<div class="container">
 
-    <div class="col-3">
-      <div class="btn">
+  <div  fxLayoutGap="50px" fxFlex.xs="1 0 auto" style=" justify-content: center">
+   
+      <mat-form-field appearance="outline" style="width:15rem" >
+        <mat-label>Clearable input</mat-label>
+        <input matInput type="text" [(ngModel)]="valueFilter" autocomplete="off"/>
         <button
-          class="rounded dropdown-toggle"
-          type="button"
-          id="dropdownMenuButton"
-          data-bs-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-          style="width: 238px; height: 45px"
+          *ngIf="valueFilter"
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="valueFilter = ''"
         >
-          Gender
+          <mat-icon>close</mat-icon>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a
-            class="dropdown-item"
-            (click)="clicouGender(gender)"
-            *ngFor="let gender of GenderFiltrado; let i = index"
-          >
-            {{ gender }}
-          </a>
-        </div>
-      </div>
-    </div>
+      </mat-form-field>
+    
 
-    <div class="col-3">
-      <div class="btn">
-        <button
-          class="rounded dropdown-toggle"
-          type="button"
-          id="dropdownMenuButton"
-          data-bs-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-          style="width: 238px; height: 45px"
-        >
-          Status
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a
-            class="dropdown-item"
-            (click)="clicouStatus(status)"
-            *ngFor="let status of StatusFiltrado; let i = index"
-          >
-            {{ status }}
-          </a>
-        </div>
-      </div>
-    </div>
+  
+      <mat-form-field  appearance=outline style="width:15rem">
+        <mat-label>Favorite food</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    
+
+    
+      <mat-form-field appearance="outline" style="width:15rem">
+        <mat-label>Favorite food</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    
+
+   
+      <mat-form-field appearance="outline" style="width:15rem">
+        <mat-label>Favorite food</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    
   </div>
-</form>
+</div>
+
 
 <rm-personagens [personagens]="personagens"></rm-personagens>
 <rm-botao-load (click)="load()" [hasMore]="hasMore"></rm-botao-load>
