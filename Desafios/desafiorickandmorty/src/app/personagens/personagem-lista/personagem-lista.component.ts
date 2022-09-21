@@ -3,7 +3,6 @@ import { debounceTime, Subject } from 'rxjs';
 
 import { Personagem } from '../personagem/personagem.model';
 import { PersonagemService } from '../personagem/personagem.service';
-import { Food } from './food.model';
 
 @Component({
   selector: 'rm-personagem-lista',
@@ -11,15 +10,7 @@ import { Food } from './food.model';
   styleUrls: ['./personagem-lista.component.css'],
 })
 export class PersonagemListaComponent implements OnInit {
-  
-  foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'},
-  ];
-
-  
-  valueFilter = 'Clear me';
+  valorFiltro = '';
 
   filtroPorNome: string = '';
   personagens: Personagem[] = [];
@@ -36,6 +27,7 @@ export class PersonagemListaComponent implements OnInit {
     'Cronenberg',
     'Planet',
   ];
+
   Gender: string[] = ['Genderless'];
 
   StatusFiltrado = new Set();
@@ -71,16 +63,31 @@ export class PersonagemListaComponent implements OnInit {
       this.StatusFiltrado = new Set(this.Status);
       this.GenderFiltrado = new Set(this.Gender);
       this.SpeciesFiltrado = new Set(this.Species);
-
+      
       this.debounce.pipe(debounceTime(300)).subscribe((filtro) => {
         this.filtroNome(filtro);
       });
     });
   }
 
-  // ngOnDestroy(): void {
-  //   this.debounce.unsubscribe;
-  // }
+  ngOnDestroy(): void {
+    this.debounce.unsubscribe;
+  }
+
+  limparFiltroNome(): void {
+    this._personagemService
+      .getFiltro(
+        '',
+        this.opcoesFiltroSpecies,
+        this.opcoesFiltroGender,
+        this.opcoesFiltroStatus
+      )
+      .subscribe((res) => {
+        this.personagens = res.results;
+      });
+
+    this.valorFiltro = '';
+  }
 
   filtroNome(name: string) {
     this.opcoesFiltroName.push(name);
@@ -92,15 +99,20 @@ export class PersonagemListaComponent implements OnInit {
         this.opcoesFiltroGender,
         this.opcoesFiltroStatus
       )
-      .subscribe((res) => {
-        this.personagens = res.results;
-        console.log(this.personagens);
-      });
+      .subscribe(
+        (res) => {
+          this.personagens = res.results;
+        },
+        () => {
+          alert('Personagem não encontrado'), this.limparFiltroNome();
+        }
+      );
   }
 
   //-- Inicio dos filtros individuais --
   clicouSpecie(tipo: any) {
     this.opcoesFiltroSpecies.push(tipo);
+    console.log(tipo);
     if (this.opcoesFiltroSpecies.length > 1) this.opcoesFiltroSpecies.shift();
     this._personagemService
       .getFiltro(

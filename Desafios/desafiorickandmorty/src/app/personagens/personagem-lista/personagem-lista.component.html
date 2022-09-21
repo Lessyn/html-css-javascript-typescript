@@ -2,61 +2,72 @@
   <img src="../../../assets/img/rickandmorty.svg" alt="Imagem RickandMorty" />
 </div>
 
-
 <div class="container">
+  <div fxLayoutGap="50px" fxFlex.xs="1 0 auto" style="justify-content: center">
+    <mat-form-field appearance="outline" style="width: 15rem">
+      <mat-label>
+        <img
+          src="../../../assets/img/lupa.svg"
+          alt="lupa"
+          style="height: 20px"
+        />
+        Filtro por nome...
+      </mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="valorFiltro"
+        autocomplete="off"
+        (keyup)="debounce.next($any($event.target).value)"
+      />
+      <button
+        *ngIf="valorFiltro"
+        matSuffix
+        mat-icon-button
+        aria-label="Limpar"
+        (click)="limparFiltroNome()"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
 
-  <div  fxLayoutGap="50px" fxFlex.xs="1 0 auto" style=" justify-content: center">
-   
-      <mat-form-field appearance="outline" style="width:15rem" >
-        <mat-label>Clearable input</mat-label>
-        <input matInput type="text" [(ngModel)]="valueFilter" autocomplete="off"/>
-        <button
-          *ngIf="valueFilter"
-          matSuffix
-          mat-icon-button
-          aria-label="Clear"
-          (click)="valueFilter = ''"
+    <mat-form-field appearance="outline" style="width: 15rem">
+      <mat-label>Species</mat-label>
+      <mat-select (selectionChange)="clicouSpecie($event.value)">
+        <mat-option
+          *ngFor="let species of SpeciesFiltrado; let i = index"
+          [value]="species"
         >
-          <mat-icon>close</mat-icon>
-        </button>
-      </mat-form-field>
-    
+          {{ species }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
 
-  
-      <mat-form-field  appearance=outline style="width:15rem">
-        <mat-label>Favorite food</mat-label>
-        <mat-select>
-          <mat-option *ngFor="let food of foods" [value]="food.value">
-            {{ food.viewValue }}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-    
+    <mat-form-field appearance="outline" style="width: 15rem">
+      <mat-label>Gender</mat-label>
+      <mat-select (selectionChange)="clicouGender($event.value)">
+        <mat-option
+          *ngFor="let gender of GenderFiltrado; let i = index"
+          [value]="gender"
+        >
+          {{ gender }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
 
-    
-      <mat-form-field appearance="outline" style="width:15rem">
-        <mat-label>Favorite food</mat-label>
-        <mat-select>
-          <mat-option *ngFor="let food of foods" [value]="food.value">
-            {{ food.viewValue }}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-    
-
-   
-      <mat-form-field appearance="outline" style="width:15rem">
-        <mat-label>Favorite food</mat-label>
-        <mat-select>
-          <mat-option *ngFor="let food of foods" [value]="food.value">
-            {{ food.viewValue }}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-    
+    <mat-form-field appearance="outline" style="width: 15rem">
+      <mat-label>Status</mat-label>
+      <mat-select (selectionChange)="clicouStatus($event.value)">
+        <mat-option
+          *ngFor="let status of StatusFiltrado; let i = index"
+          [value]="status"
+        >
+          {{ status }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
   </div>
 </div>
-
 
 <rm-personagens [personagens]="personagens"></rm-personagens>
 <rm-botao-load (click)="load()" [hasMore]="hasMore"></rm-botao-load>
