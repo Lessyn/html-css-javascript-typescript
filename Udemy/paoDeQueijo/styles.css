@@ -1,0 +1,58 @@
+/* Cabeçalho */
+
+header{
+    background-color: #DFA225;    
+    min-height: 60vh;
+    padding: 50px;
+
+}
+
+.logo{
+    max-width: 1200px;
+    margin: 0 auto;   
+    justify-content: center;
+}
+
+h1{
+    background-color: #6F1717;
+    color: #ffffff;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 4px solid #2e0000;
+}
+
+.container{
+    background-color: #DFA225;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+   
+   
+}
+
+.container-produtos-cards{
+    display: flex;
+   
+}
+
+
+
+.produtos-imagens{
+  
+   
+}
+
+/* Footer */
+
+footer{
+    background-color: #6F1717;
+    color: #ffffff;
+    border-top:4px solid #2e0000;
+    text-align: center;
+    padding: 80px;
+}
+
+    
+
+
