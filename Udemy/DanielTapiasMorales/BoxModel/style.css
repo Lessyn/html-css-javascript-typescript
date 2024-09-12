@@ -17,3 +17,11 @@ h2{
     height: 100px;
     margin: 16px;
 }
+.borda{
+    border: 5px solid red;
+    padding: 10px;
+    border-radius: 5px;
+}
+.outline{
+    outline: 5px dashed blue;
+}
