@@ -21,27 +21,26 @@ h1{
     border-bottom: 4px solid #2e0000;
 }
 
-.container{
+.container-produtos{
     background-color: #DFA225;
     display: flex;
+    justify-content:space-between;
+    align-items: center;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 31%;
+   
    
    
 }
 
 .container-produtos-cards{
-    display: flex;
-   
+    padding: 30px;
 }
 
 
 
-.produtos-imagens{
-  
-   
-}
+
 
 /* Footer */
 

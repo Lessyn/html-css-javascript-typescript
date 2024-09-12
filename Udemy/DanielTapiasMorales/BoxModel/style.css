@@ -1,0 +1,19 @@
+body{
+    font-family: sans-serif;
+}
+
+p{
+    background-color: #ccc;
+}
+
+h1{
+    background-color: #184f0e;
+    padding: 16px;
+}
+
+h2{
+    background-color: #1f0f66;
+    width: 50%;
+    height: 100px;
+    margin: 16px;
+}
