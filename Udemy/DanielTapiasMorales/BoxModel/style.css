@@ -1,33 +1,23 @@
-body{
+h1, a, p{
     font-family: sans-serif;
 }
 
-h1{
-    border:2px solid red ;
-    width: 25%;
-}
-
 a{
-    background-color: yellow;
     padding: 10px;
     display: inline-block;
+    background-color: aqua;
 }
 
-strong{
-    background-color: #cd7777;
-    display: inline-block;
-    height: 60px;
-    width: 50%;
+a:link{
+    color: red;
+}
+a:visited{
+    color: green;
+}
+a:hover{
+    color: #ccc;
 }
 
-p{
-    background-color: #ccc;
-    width: 50%;
+a:active{
+    color: yellow;
 }
-
-b{
-    display: inline;
-    visibility: hidden;
-}
-
-
