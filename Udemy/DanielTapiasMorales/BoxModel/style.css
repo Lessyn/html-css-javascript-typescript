@@ -2,37 +2,32 @@ body{
     font-family: sans-serif;
 }
 
+h1{
+    border:2px solid red ;
+    width: 25%;
+}
+
+a{
+    background-color: yellow;
+    padding: 10px;
+    display: inline-block;
+}
+
+strong{
+    background-color: #cd7777;
+    display: inline-block;
+    height: 60px;
+    width: 50%;
+}
+
 p{
     background-color: #ccc;
-    width: 500px;
-
-}
-
-h2{
-    background-color: #1f0f66;
     width: 50%;
-    height: 100px;
-    margin: 16px;
-}
-.borda{
-    border: 5px solid red;
-    padding: 10px;
-    border-radius: 5px;
-}
-.outline{
-    outline: 5px dashed blue;
 }
 
-.p2{
-    padding: 25px;
-}
-.p3{
-    padding: 25px;
-    border: 10px solid green;
+b{
+    display: inline;
+    visibility: hidden;
 }
 
-.p4{
-    padding: 25px;
-    border: 10px solid green;
-    box-sizing: border-box;
-}
+
