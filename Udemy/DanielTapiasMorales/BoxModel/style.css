@@ -1,15 +1,79 @@
+:root {
+    --fonte: sans-serif;
+    --fonte-size-principal: x-small;
+    --cor-dos-titulos: #061761;
+    --cor-dos-titulos-experiencias: #070BEB;
+    --background-dos-titulos: #ACAFD4;
+    --background-dos-subtitulos:#B6B6B6;
+
+}
+
 body{
-    font-family: sans-serif;
+    background-color: #CCCCCC;
+    font-family: var(--fonte);
+    margin: 25px 50px;
+    font-size: var(--fonte-size-principal);
 }
 
-ul li{
-    list-style-type: disc;
-    color: red;
-    list-style-position: inside;
+h1{
+    background-color: var(--background-dos-titulos);
+    text-align: center;
+    color: var(--cor-dos-titulos);
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 5px;
+}
+header p{
+    text-align: center;
+    font-size: var(--fonte-size-principal);
+    padding: 10px;
 }
 
-ol li{
-    list-style-type: lower-alpha;
-    color: blue;
-    list-style-position: inside;
+.Subtitulos{
+    color: var(--cor-dos-titulos);
+    background-color: var(--background-dos-subtitulos);
+    font-size: 25px;
+    font-weight: bolder;
+    border-bottom: 2px solid var(--cor-dos-titulos);
+    padding: 10px;
+    margin: 15px 0px 15px;
 }
+
+.Subtitulos-experiencias{
+    color: var(--cor-dos-titulos-experiencias);
+    font-weight:bolder;
+    display: inline-block;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+.Subtitulos-experiencias-periodo{
+    font-weight: bolder;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+.Subtitulos-experiencias-cargo{
+    font-weight: bolder;
+    font-size: 12px ;
+    padding-bottom: 10px;
+}
+
+.Subtitulos-experiencias-funcao{    
+    padding-bottom: 10px;
+}
+
+.Subtitulos-formacao{
+    font-weight:bolder;
+    display: inline-block;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+.Subtitulos-formacao-periodo{
+    padding-bottom: 10px;
+}
+
+.Subtitulos-formacao-faculdade{
+    padding-bottom:10px;
+}
+
+
