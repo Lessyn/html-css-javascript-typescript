@@ -39,10 +39,15 @@ header p{
     margin: 15px 0px 15px;
 }
 
-.Subtitulos-experiencias{
+ .Subtitulos-experiencias strong{
     color: var(--cor-dos-titulos-experiencias);
     font-weight:bolder;
     display: inline-block;
+    font-size: 15px;
+}
+
+.Subtitulos-experiencias{
+    font-weight: bolder;
     font-size: 15px;
     padding-bottom: 10px;
 }
@@ -62,9 +67,8 @@ header p{
 }
 
 .Subtitulos-formacao{
-    font-weight:bolder;
-    display: inline-block;
-    font-size: 15px;
+    font-weight:bolder;   
+    font-size: 13px;
     padding-bottom: 10px;
 }
 
@@ -74,6 +78,32 @@ header p{
 
 .Subtitulos-formacao-faculdade{
     padding-bottom:10px;
+}
+
+.Cursos-Especializacoes{
+    padding-bottom: 10px;
+}
+.Subtitulos-listaCursosEspecializacoes{
+    list-style: inside;  
+    
+}
+.List1{
+    padding-bottom: 10px;
+}
+
+.Subtitulos-cursosEspecializacoes-cursos{
+    font-weight: bolder;
+    font-size: 13px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.Desenvolvedor{
+    padding: 10px 0px;
+    border-top: 2px solid var(--cor-dos-titulos);
+    background-color: var(--background-dos-titulos);
+    font-weight: bolder;
+    text-align: end;
 }
 
 
