@@ -5,6 +5,7 @@ body {
 
 .hero{
     background-image:url(../Imagens/bg-3.jpg) ;
+    box-shadow: 4px 4px 4px black;
     height: 500px;
     background-size: cover;
     background-position: right center;
@@ -21,8 +22,7 @@ body {
 .hero-content h1{
     font-size: 56px;
     text-shadow: 2px 2px 2px black;
-    text-transform: uppercase;
-    margin-bottom: 0;
+    text-transform: uppercase;    
 }
 
 .hero-content p{
@@ -72,7 +72,7 @@ body {
 article {
     background-color: white;
     padding: 16px;   
-    margin: 32px 0;
+    margin: 32px 0px;
 }
 
 article h2{
