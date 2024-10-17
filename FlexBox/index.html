@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
 
-    <title>FlexBloq</title>
+    <title>FlexBlog</title>
 </head>
 
 <body>
@@ -29,7 +29,7 @@
                 <div class="menu-logo">
                     <a href="#">FlexBlog</a>
                 </div>
-                <nav>
+                <nav class="menu-nav">
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#produtos">Produtos</a></li>
                     <li><a href="#preco">Preço</a></li>
@@ -38,7 +38,7 @@
             </div>
         </section>
         <section class="introducao">
-            <h1>Novos Valores e Propriedades de CSS</h1>
+            <h1>Novos Valores e <br> Propriedades de CSS</h1>
         </section>
     </header>
     <main>
@@ -65,24 +65,21 @@
                     <img src="img/produtos1.jpg" alt=" Produtos 1">
 
                 </div>
-                <div class="produtos-item pink"></div>
-                <h2>Pink</h2>
-                <img src="img/produtos2.jpg" alt=" Produtos 2">
+                <div class="produtos-item pink">
+                    <h2>Pink</h2>
+                    <img src="img/produtos2.jpg" alt=" Produtos 2">
+                </div>
 
-            </div>
-            <div class="produtos-item blue"></div>
-            <h2>Blue</h2>
-            <img src="img/produtos3.jpg" alt=" Produtos 3">
-
-            </div>
+                <div class="produtos-item blue">
+                    <h2>Blue</h2>
+                    <img src="img/produtos3.jpg" alt=" Produtos 3">
+                </div>
             </div>
         </section>
-
         <section class="preco" id="preco">
             <div class="preco-item">
                 <h2>Cobre</h2>
                 <span><sup>R$</sup>19</span>
-
                 <ul>
                     <li>Planos ilimitados</li>
                     <li>Acesso Restrito</li>
@@ -93,19 +90,17 @@
             </div>
 
             <div class="preco-item">
+                <h2>Prata</h2>
+                <span><sup>R$</sup>39</span>
 
-            </div>
-            <h2>Prata</h2>
-            <span><sup>R$</sup>39</span>
-
-            <ul>
-                <li>Planos ilimitados</li>
-                <li>Acesso Restrito</li>
-                <li>Conteúdo Secreto</li>
-                <li>Suporte 24h</li>
-                <li>Compra Exclusiva</li>
-            </ul>
-            <a href="#">Comprar</a>
+                <ul>
+                    <li>Planos ilimitados</li>
+                    <li>Acesso Restrito</li>
+                    <li>Conteúdo Secreto</li>
+                    <li>Suporte 24h</li>
+                    <li>Compra Exclusiva</li>
+                </ul>
+                <a href="#">Comprar</a>
             </div>
 
             <div class="preco-item">
@@ -162,18 +157,18 @@
             </div>
         </section>
         <section class="newsletter">
-            <div>
+            <div class="newsletter-info">
                 <h1>Newsletter</h1>
                 <p>Assine e fique por dentro das novidades</p>
             </div>
-            <form action="">
+            <form class="newsletter-form">
                 <input type="text" placeholder="Seu e-mail">
                 <button type="submit">Assinar</button>
             </form>
         </section>
     </main>
     <footer class="footer">
-        <p>flexblog &copy; Todos os direitos reservados</p>
+        <p>Flexblog &copy; Todos os direitos reservados</p>
     </footer>
 
 </body>
