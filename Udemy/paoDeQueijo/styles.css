@@ -96,6 +96,7 @@ header {
     font-size: 20px;
     font-style: italic;
     font-weight: bold;
+
 }
 
 .sobre-historia img {
@@ -128,7 +129,7 @@ header {
     font-style: italic;
     font-weight: bold;
     max-width: 795px;
-    margin: 0 auto;
+    margin: 0px auto;
 }
 
 .produtos-cards {
@@ -137,7 +138,6 @@ header {
     margin: 0px 40px;
     justify-content: space-around;
     align-items: center;
-
 }
 
 .cards {
