@@ -1,0 +1,149 @@
+:root {
+    --cor-body: #0c1013;
+    --cor-navegacao: #050709;
+    --cor-fonteprincipal: #ffffff;
+    --cor-links: #cbe200;
+    --cor-planos: #20262d;
+    --font-principal: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: var(--cor-body);
+    color: var(--cor-fonteprincipal);
+    font-family: var(--font-principal);
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Navegação */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: var(--cor-navegacao);
+    align-items: center;
+    padding: 20px;
+
+}
+
+.menu-titulo {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.87em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.menu-navegacao-link {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.menu-navegacao a {
+    display: block;
+    margin: 10px;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 10%;
+    color: var(--cor-fonteprincipal);
+
+}
+
+.menu-navegacao a:hover {
+    background-color: var(--cor-links);
+    color: var(--cor-navegacao);
+}
+
+@media(max-width: 610px) {
+
+    .menu-titulo,
+    .menu-navegacao {
+        margin: 0 auto;
+    }
+
+}
+
+/* Conteúdo */
+
+.conteudo-titulo {
+    text-align: center;
+    padding: 50px 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 65px;
+    color: var(--cor-fonteprincipal);
+}
+
+.conteudo-planos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+
+.planos {
+    flex: 0 1 250px;
+    margin: 0 auto;
+    background: var(--cor-planos);
+    border-radius: 2%;
+    padding: 25px;
+    color: var(--cor-fonteprincipal);
+
+}
+
+.plano-preco h3 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: bold;
+    border-bottom: 2px solid var(--cor-links);
+    padding-bottom: 10px;
+}
+
+.plano-preco p {
+    padding: 20px 0px;
+}
+
+.plano-beneficios {
+    display: flex;
+    flex-direction: column;
+}
+
+.plano-preco p span {
+    font-size: 1.87em;
+    font-weight: bold;
+}
+
+.plano-beneficios-lista {
+    flex-basis: 160px;
+}
+
+.plano-beneficios li {
+    list-style: inside;
+    line-height: 1.8;
+}
+
+.plano-beneficios li::marker {
+    color: var(--cor-links);
+
+}
+
+.plano-beneficios a {
+    text-align: center;
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--cor-navegacao);
+    text-transform: uppercase;
+    padding: 15px 0px;
+    border-radius: 2%;
+    background-color: var(--cor-links);
+}
+
+.plano-beneficios a:hover {
+    outline: 2px solid var(--cor-links);
+    background-color: transparent;
+    color: white;
+}
