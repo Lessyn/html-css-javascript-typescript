@@ -56,7 +56,7 @@ body {
     color: var(--cor-navegacao);
 }
 
-@media(max-width: 610px) {
+@media(max-width: 650px) {
 
     .menu-titulo,
     .menu-navegacao {
@@ -79,13 +79,13 @@ body {
 .conteudo-planos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     gap: 16px;
+
 }
 
 
 .planos {
-    flex: 0 1 250px;
+    flex-basis: 250px;
     margin: 0 auto;
     background: var(--cor-planos);
     border-radius: 2%;
@@ -107,28 +107,27 @@ body {
     padding: 20px 0px;
 }
 
-.plano-beneficios {
-    display: flex;
-    flex-direction: column;
-}
-
 .plano-preco p span {
     font-size: 1.87em;
     font-weight: bold;
 }
 
-.plano-beneficios-lista {
-    flex-basis: 160px;
+.plano-beneficios {
+    display: flex;
+    flex-direction: column;
 }
 
-.plano-beneficios li {
+
+.plano-beneficios-lista {
+    flex-basis: 270px;
     list-style: inside;
     line-height: 1.8;
+    margin-bottom: 20px;
+
 }
 
 .plano-beneficios li::marker {
     color: var(--cor-links);
-
 }
 
 .plano-beneficios a {
@@ -140,6 +139,7 @@ body {
     padding: 15px 0px;
     border-radius: 2%;
     background-color: var(--cor-links);
+
 }
 
 .plano-beneficios a:hover {
