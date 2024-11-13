@@ -1,0 +1,128 @@
+/* CSS Tabelas.html */
+/* body {
+    font-family: sans-serif;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    background-color: beige;
+    border-collapse: collapse;
+}
+
+td {
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+th {
+    background-color: rgb(190, 190, 155);
+    border: 2px solid rgb(117, 117, 95);
+    padding: 16px;
+} */
+
+/* Fim CSS Tabelas.html */
+
+/* CSS Details.html */
+
+/* body {
+    font-family: sans-serif;
+}
+
+details {
+    color: red;
+    background-color: #ccc;
+    margin-bottom: 1em;
+    padding: .5em;
+}
+
+details summary {
+    cursor: pointer;
+}
+
+details[open] {
+    background-color: blue;
+} */
+
+/* Fim CSS Details */
+
+/* popover.html */
+
+/* :popover-open {
+    width: 300px;
+    padding: 0 12px;
+    border-radius: 12px;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, .32);
+}
+
+.popover-container :popover-open {
+    inset: unset
+} */
+
+/* Fim popover.html */
+
+/* Desafio */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.profile-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.help-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.help-button:hover {
+    background-color: #0056b3;
+}
+
+.popover-content {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+::backdrop {
+    background-color: rgb(0, 0, 0, .5);
+}
+
+:popover-open {
+    inset: unset;
+    /* remover qualquer valor aplicado, até mesmo 0, de top, left, right e bottom*/
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}

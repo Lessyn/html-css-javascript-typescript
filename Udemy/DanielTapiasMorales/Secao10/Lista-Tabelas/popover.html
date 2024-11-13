@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Popover</title>
+</head>
+
+<body>
+
+    <h1>Curso de Web Design - Popover</h1>
+
+    <button popovertarget="my-popover">Toggle popover</button>
+    <div id="my-popover" popover>Este texto é aberto ao clicar no botão</div>
+    <hr>
+    <button popovertarget="my-popover2">popover auto</button>
+    <div id="my-popover2" popover="auto">Este texto é aberto ao clicar no botão</div>
+    <hr>
+    <button popovertarget="my-popover3">popover manual</button>
+    <div id="my-popover3" popover="manual">Este texto não fecha ao clicar fora</div>
+    <hr>
+    <button popovertarget="my-popover4" popovertargetaction="show">popover show</button>
+    <button popovertarget="my-popover4" popovertargetaction="hide">popover hide</button>
+    <div id="my-popover4" popover="manual">Este texto não fecha ao clicar fora</div>
+    <hr>
+    <div class="popover-container">
+        <button popovertarget="my-popover5">Toogle popover</button>
+        <div popover id="my-popover5">Texto de ajuda do popover</div>
+    </div>
+
+
+</body>
+
+</html>
