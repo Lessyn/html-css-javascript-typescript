@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleForm.css">
+    <title>Formulário</title>
+</head>
+
+<body>
+
+    <form action="">
+        <fieldset>
+            <legend>Introdução</legend>
+            <label for="email">Campo tipo e-mail:</label>
+            <input type="email" name="email" id="email">
+            <br><br>
+
+            <label for="numerico">Campo tipo numérico:</label>
+            <input type="number" id="numerico" min="0" max="10">
+            <br><br>
+
+            <label for="texto">Campo tipo texto:</label>
+            <input type="text" id="texto">
+            <br><br>
+
+            <label for="data">Campo tipo data:</label>
+            <input type="date" min="2024-01-15" max="2024-12-15" id="data">
+            <br><br>
+
+            <label for="">Campo tipo radio:</label>
+            <label for="Sim">
+                <input type="radio" name="SimouNão" id="Sim" value="sim">Sim
+            </label>
+            <label for="Não">
+                <input type="radio" name="SimouNão" id="Não" value="nao">Não
+            </label>
+            <br><br>
+
+            <label for="">Campo tipo checkbox:</label>
+            <label for="opcao1"> <input type="checkbox" id="opcao1" name="opcaoselecionada" value="opcao1">Opção 1
+            </label>
+            <label for="opcao2"> <input type="checkbox" id="opcao2" name="opcaoselecionada" value="opcao2">Opção 2
+            </label>
+            <label for="opcao3"> <input type="checkbox" id="opcao3" name="opcaoselecionada" value="opcao3">Opção 3
+            </label>
+            <br><br>
+
+            <label for="">Campo tipo Select:</label>
+            <select name="select" id="" required multiple size="8">
+                <option value="">Selecione</option>
+                <optgroup label="Seleção 1">
+                    <option value="Select1">Select 1</option>
+                    <option value="Select2">Select 2</option>
+                    <option value="Select3">Select 3</option>
+                </optgroup>
+
+                <optgroup label="Seleção 2">
+                    <option value="Select4">Select 4</option>
+                    <option value="Select5">Select 5</option>
+                    <option value="Select6">Select 6</option>
+                </optgroup>
+            </select>
+            <br><br>
+
+            <label for="">Campo tipo Datalist:</label>
+            <input type="text" list="Datalist">
+            <datalist id="Datalist">
+                <option value="Lista1">
+                <option value="Lista2">
+                <option value="Lista3">
+                <option value="Lista4">
+                <option value="Lista5">
+                <option value="Lista6">
+            </datalist>
+            <br><br>
+
+            <label for="">Campo tipo Textarea:</label>
+            <textarea name="Mensagem" id="" cols="50" rows="10" maxlength="10"></textarea>
+            <br>
+            <textarea cols="50" rows="8" disabled>Texto padrão no campo do textarea</textarea>
+            <br><br>
+
+            <label for="">Campo tipo File:</label>
+            <input type="file">
+            <br><br>
+
+            <label for="">Campo tipo Hidden:</label>
+            <input type="hidden" value="Texto escondido.">
+            <br><br>
+
+            <label for="">Campo tipo Button:</label>
+            <input type="button" value="Button">
+            <br><br>
+
+            <label for="">Campo tipo Search:</label>
+            <input type="search">
+            <br><br>
+
+            <label for="">Campo tipo Range:</label>
+            <input type="range" min="0" max="10" step="2">
+            <br><br>
+
+            <label for="">Campo tipo Time:</label>
+            <input type="time">
+            <br><br>
+
+            <label for="">Campo tipo Cor:</label>
+            <input type="color">
+
+            <br><br>
+            <input type="submit" value="mandar">
+            <br><br>
+
+
+
+
+
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

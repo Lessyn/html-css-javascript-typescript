@@ -1,0 +1,10 @@
+textarea {
+    resize: none;
+
+}
+
+progress,
+checkbox,
+input {
+    accent-color: yellow;
+}
