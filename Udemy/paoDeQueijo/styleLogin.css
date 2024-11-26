@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100hv;
+}
+
+/* Tela de login */
+
+.formulario {
+    display: flex;
+    width: 50%;
+    border: 2px solid;
+    box-shadow: 2px 2px 0px green;
+}
+
+.formLogin {
+    display: flex;
+    align-items: center;
+}
+
+.imagemLogin {
+    width: 50%;
+}
+
+.imagemLogin img {
+    width: 100%;
+}
+
+.telaLogin {
+    display: flex;
+    flex-direction: column;
+}
+
+.telaLogin input,
+label {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button a {
+    text-decoration: none;
+    color: inherit;
+}

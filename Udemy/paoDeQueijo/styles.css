@@ -64,6 +64,7 @@ header {
 .menu-nav li a:hover {
     color: #6e191b;
     cursor: pointer;
+    transition: 0.8S;
 }
 
 /* Sobre */
