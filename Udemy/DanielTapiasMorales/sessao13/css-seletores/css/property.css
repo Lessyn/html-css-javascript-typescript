@@ -1,0 +1,45 @@
+@property --success-color {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: green;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+:root {
+    --success-color: blue;
+    /* --error-color: red;
+    --angle: 0deg; */
+}
+
+body {
+    --success-color: 50px;
+    color: whitesmoke;
+    background-color: rgba(1, 3, 11, 0.542);
+}
+
+.container {}
+
+.div2 {}
+
+b {
+    color: var(--success-color, red);
+}
+
+.anima {
+    width: 200px;
+    height: 200px;
+    background-color: var(--success-color, blue);
+    transform: rotate(var(--angle));
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
+}

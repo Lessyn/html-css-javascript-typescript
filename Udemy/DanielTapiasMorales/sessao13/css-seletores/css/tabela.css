@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+caption {
+    font-size: 2em;
+    color: black;
+}
+
+table {
+    width: 100vh;
+    margin: auto;
+    background-color: rgb(147, 147, 147);
+    color: white;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+td {
+    color: black;
+}
+
+.cabecalho {
+    background-color: rgb(34, 32, 32);
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+tr:hover {
+    background-color: rgb(80, 80, 80);
+}
+
+tr:has(:checked) {
+    background-color: red;
+}

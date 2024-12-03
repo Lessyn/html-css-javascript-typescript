@@ -1,5 +1,5 @@
 /* CSS Tabelas.html */
-/* body {
+body {
     font-family: sans-serif;
 }
 
@@ -20,7 +20,7 @@ th {
     background-color: rgb(190, 190, 155);
     border: 2px solid rgb(117, 117, 95);
     padding: 16px;
-} */
+}
 
 /* Fim CSS Tabelas.html */
 
@@ -67,7 +67,7 @@ details[open] {
 
 /* Desafio */
 
-body {
+/* body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     margin: 0;
@@ -121,8 +121,10 @@ body {
 :popover-open {
     inset: unset;
     /* remover qualquer valor aplicado, até mesmo 0, de top, left, right e bottom*/
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
+position: absolute;
+top: 100px;
+left: 50%;
+transform: translateX(-50%);
 }
+
+*/
