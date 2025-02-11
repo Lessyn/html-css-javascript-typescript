@@ -1,0 +1,134 @@
+/* Estilo para o index */
+
+:root {
+    --primary-color: #ff7833;
+    --secondary-color: #31333b;
+    --text-color: #e7e7e7;
+    --secondary-color-light: #444856;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    color: var(--text-color);
+    background-color: #ccc;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    line-height: 1.7rem;
+
+}
+
+h1 {
+    font-size: 4rem;
+    color: #7b7b7b;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-color);
+}
+
+h2 {
+    margin-top: 1rem;
+}
+
+article {
+
+    padding: 1em 0;
+
+}
+
+.main-header {
+    flex: 0 0 26rem;
+    background-color: var(--secondary-color);
+}
+
+.main {
+    background-color: var(--secondary-color-light);
+    flex: 1 0;
+    padding: 6.5rem 6rem 7.5rem;
+}
+
+.main,
+.main-header {
+    font-size: 1.6rem;
+}
+
+a {
+    color: inherit;
+}
+
+.perfil-img {
+    border-radius: 50%;
+    max-width: 10rem;
+}
+
+.main-nav {
+    text-align: right;
+    padding: 6.5rem 2.4rem 2.4rem;
+}
+
+.main-nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.main-nav li {
+    border-bottom: 1px solid #7b7b7b;
+    padding: .4rem .4rem;
+
+}
+
+.main-nav ul a {
+    display: block;
+    padding: 1.2rem 0;
+    text-decoration: none;
+    transition: padding-right .2s, background-color .4s;
+    background-color: transparent;
+}
+
+.main-nav ul a:hover,
+.main-nav ul a:focus {
+    background-color: var(--secondary-color-light);
+    padding-right: 1rem;
+}
+
+/* Fim do estilo do index */
+
+/* início do estilo da tipografia */
+
+.underline {
+    text-decoration: underline red wavy;
+}
+
+kbd {
+    background-color: #eee;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow:
+        0 1px 1px rgba(0, 0, 0, 0.2),
+        0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+    color: #333;
+    display: inline-block;
+    font-size: 0.85em;
+    font-weight: 700;
+    line-height: 1;
+    padding: 2px 4px;
+    white-space: nowrap;
+}
+
+.highlight {
+    border-left: 1px solid var(--primary-color);
+    font-size: 1.1em;
+    padding-left: 2em;
+    margin-bottom: 2.2em;
+}
